@@ -7,7 +7,7 @@ const locales = {
     seeInAction: "See it in action ↓",
     galleryTitle: "Less ceremony. More aircraft.",
     galleryIntro: "Real SkyFox screens from the app, not mockups.",
-    labels: ["Live map", "Search", "Watchlist", "Feeders"],
+    labels: ["Live map", "Search", "Watchlist", "Plane details"],
   },
   de: {
     heroTitle: "Behalte den Himmel im Blick.",
@@ -17,7 +17,7 @@ const locales = {
     seeInAction: "In Aktion ansehen ↓",
     galleryTitle: "Weniger Umwege. Mehr Flugzeuge.",
     galleryIntro: "Echte SkyFox-Bildschirme aus der App, keine Mockups.",
-    labels: ["Live-Karte", "Suche", "Beobachtungsliste", "Feeder"],
+    labels: ["Live-Karte", "Suche", "Beobachtungsliste", "Flugdetails"],
   },
   fr: {
     heroTitle: "Garde les yeux vers le ciel.",
@@ -27,7 +27,7 @@ const locales = {
     seeInAction: "Voir l’application ↓",
     galleryTitle: "Moins de détour. Plus d’avions.",
     galleryIntro: "De vrais écrans SkyFox, pas des maquettes.",
-    labels: ["Carte en direct", "Recherche", "Suivi", "Feeders"],
+    labels: ["Carte en direct", "Recherche", "Suivi", "Détails du vol"],
   },
   es: {
     heroTitle: "Mira al cielo.",
@@ -37,7 +37,7 @@ const locales = {
     seeInAction: "Verlo en acción ↓",
     galleryTitle: "Menos ruido. Más aviones.",
     galleryIntro: "Pantallas reales de SkyFox, no maquetas.",
-    labels: ["Mapa en directo", "Búsqueda", "Seguimiento", "Feeders"],
+    labels: ["Mapa en directo", "Búsqueda", "Seguimiento", "Detalles del avión"],
   },
   it: {
     heroTitle: "Tieni gli occhi sul cielo.",
@@ -47,24 +47,14 @@ const locales = {
     seeInAction: "Guardalo in azione ↓",
     galleryTitle: "Meno rumore. Più aerei.",
     galleryIntro: "Schermate reali di SkyFox, non mockup.",
-    labels: ["Mappa live", "Ricerca", "Monitoraggio", "Feeder"],
-  },
-  ru: {
-    heroTitle: "Следи за небом.",
-    heroLede: "SkyFox — быстрый авиатрекер с уважением к приватности и без обязательной учётной записи.",
-    download: "Скачать последнюю APK ↗",
-    downloadShort: "Скачать APK ↗",
-    seeInAction: "Посмотреть в работе ↓",
-    galleryTitle: "Меньше лишнего. Больше самолётов.",
-    galleryIntro: "Настоящие экраны SkyFox, а не макеты.",
-    labels: ["Живая карта", "Поиск", "Наблюдение", "Фидеры"],
+    labels: ["Mappa live", "Ricerca", "Monitoraggio", "Dettagli del volo"],
   },
 };
 
 const gallery = document.querySelector("#gallery");
 const localeSelect = document.querySelector("#locale");
 const galleryButtons = [...document.querySelectorAll("[data-gallery-locale]")];
-const screens = ["map", "search", "watch", "feeders"];
+const screens = ["map", "search", "watch", "plane-details"];
 
 function renderGallery(locale) {
   const copy = locales[locale] || locales.en;
