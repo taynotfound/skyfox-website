@@ -445,3 +445,91 @@ h1 em { color: var(--md-primary); font-style: normal; }
   text-underline-offset: 3px;
 }
 .release-notes-link:hover { color: var(--md-on-surface); }
+
+/* ── Trust row ─────────────────────────────────────────── */
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  font-size: .85rem;
+  color: var(--md-on-surface-var);
+}
+.trust-row li::before { content: '✓  '; color: var(--md-primary); }
+
+/* ── Download tiers ─────────────────────────────────────── */
+.download-tiers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.5rem 0 1rem;
+}
+.download-tier {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid var(--md-outline);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.download-tier-stable { border-color: var(--md-primary); background: color-mix(in srgb, var(--md-primary) 6%, var(--md-surface)); }
+.download-tier-nightly { background: var(--md-surface-2); }
+.tier-label {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--md-on-surface-var);
+  margin: 0 0 .75rem;
+}
+.download-tier-stable .tier-label { color: var(--md-primary); }
+.tier-note {
+  font-size: .8rem;
+  color: var(--md-on-surface-var);
+  margin: .75rem 0 0;
+}
+.download-meta {
+  font-size: .8rem;
+  color: var(--md-on-surface-var);
+  margin-top: 1rem;
+}
+.download-meta a { color: var(--md-primary); }
+
+/* ── FAQ ────────────────────────────────────────────────── */
+.faq-section { padding: 4rem 0; }
+.faq-list {
+  display: grid;
+  gap: 1px;
+  background: var(--md-outline);
+  border: 1px solid var(--md-outline);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.faq-item {
+  background: var(--md-surface);
+  padding: 1.25rem 1.5rem;
+}
+.faq-item:first-child { border-radius: 12px 12px 0 0; }
+.faq-item:last-child { border-radius: 0 0 12px 12px; }
+.faq-item dt {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--md-on-bg);
+  margin: 0 0 .4rem;
+}
+.faq-item dd {
+  margin: 0;
+  font-size: .9rem;
+  color: var(--md-on-surface-var);
+  line-height: 1.6;
+}
+
+/* ── Footer attr ─────────────────────────────────────────── */
+.footer-attr {
+  font-size: .75rem;
+  color: var(--md-on-surface-var);
+  margin-top: .5rem;
+}
+.footer-attr a { color: var(--md-on-surface-var); text-decoration: underline; }
