@@ -268,7 +268,11 @@ function applyLocale(locale) {
   document.title = `SkyFox, ${copy.galleryTitle.toLowerCase()}`;
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const value = copy[element.dataset.i18n];
-    if (value) element.textContent = value;
+    if (!value) return;
+    // Preserve child elements (e.g. <span aria-hidden>↗</span>) — only replace the text node.
+    const firstText = [...element.childNodes].find(n => n.nodeType === Node.TEXT_NODE);
+    if (firstText) firstText.textContent = value;
+    else element.textContent = value;
   });
   localeSelect.value = locale;
   renderGallery(locale);
