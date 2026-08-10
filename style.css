@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap');
 
 :root {
-  /* M3 dark tonal palette — SkyFox warm */
-  --md-bg:           #0f0d11;
-  --md-surface:      #1b1a1f;
-  --md-surface-2:    #211f27;
-  --md-surface-3:    #272530;
-  --md-on-surface:   #e8e3ee;
-  --md-on-surface-v: #9e99a8;
-  --md-outline:      #48444f;
-  --md-outline-v:    #302d38;
-  /* primary = SkyFox orange (keeps brand) */
-  --md-primary:      #f96316;
-  --md-on-primary:   #160700;
-  --md-primary-c:    #3a1800;   /* container */
-  --md-on-primary-c: #ffdbc9;
-  /* secondary = sky blue */
-  --md-secondary:    #6ec9f5;
-  --md-on-secondary: #003549;
+  /* Exact app dark theme tokens (values-night/colors.xml) */
+  --md-bg:           #0C0E11;
+  --md-surface:      #171A1D;
+  --md-surface-2:    #1D2023;
+  --md-surface-3:    #242629;
+  --md-on-surface:   #E4E5E9;
+  --md-on-surface-v: #929397;
+  --md-outline:      #747579;
+  --md-outline-v:    #46484B;
+  /* primary = app primary (#91C3F4 steel blue) */
+  --md-primary:      #91C3F4;
+  --md-on-primary:   #003E63;
+  --md-primary-c:    #004770;   /* primaryContainer dark */
+  --md-on-primary-c: #C3DDFF;
+  /* tertiary = fox amber */
+  --md-tertiary:     #FFC697;
+  --md-on-tertiary:  #6C3B02;
+  --md-tertiary-c:   #603300;
   /* shape */
   --r-xs:  4px;
   --r-sm:  12px;
@@ -68,7 +69,7 @@ nav {
   font-weight: 500;
 }
 nav a, .site-footer a { text-decoration: none; }
-nav a:hover, .site-footer a:hover, .trust-copy a:hover { color: var(--md-secondary); }
+nav a:hover, .site-footer a:hover, .trust-copy a:hover { color: var(--md-tertiary); }
 .nav-cta {
   color: var(--md-on-surface);
   background: var(--md-surface-2);
@@ -92,7 +93,7 @@ nav a:hover, .site-footer a:hover, .trust-copy a:hover { color: var(--md-seconda
 }
 .eyebrow, .feature-index {
   margin: 0 0 1rem;
-  color: var(--md-secondary);
+  color: var(--md-tertiary);
   font: 500 .72rem/1.2 'Roboto Mono', monospace;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -102,8 +103,8 @@ nav a:hover, .site-footer a:hover, .trust-copy a:hover { color: var(--md-seconda
   width: 8px; height: 8px;
   margin-right: .4rem;
   border-radius: 50%;
-  background: var(--md-primary);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--md-primary) 20%, transparent);
+  background: var(--md-tertiary);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--md-tertiary) 20%, transparent);
 }
 h1, h2, h3, p { text-wrap: pretty; }
 h1 {
@@ -148,7 +149,7 @@ h1 em { color: var(--md-primary); font-style: normal; }
 }
 .button-secondary:hover { background: var(--md-surface-3); }
 .text-link { color: var(--md-on-surface); text-decoration: none; font-size: .9rem; font-weight: 500; }
-.text-link:hover, .feature-link:hover { color: var(--md-secondary); }
+.text-link:hover, .feature-link:hover { color: var(--md-tertiary); }
 
 /* ─── hero art ─── */
 .hero-art {
@@ -192,7 +193,7 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .flight-label small { color: var(--md-on-surface-v); }
 .label-dot  { width: 7px; height: 7px; border-radius: 50%; }
 .orange     { background: var(--md-primary); }
-.blue       { background: var(--md-secondary); }
+.blue       { background: var(--md-tertiary); }
 .yellow     { background: #f6c84a; }
 .label-one   { top: 16%; left: 8%; }
 .label-two   { right: 7%; top: 43%; }
@@ -247,7 +248,7 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .feature-wide { min-height: 320px; }
 .feature-accent {
   background: var(--md-primary-c);
-  border-color: color-mix(in srgb, var(--md-primary) 30%, transparent);
+  border-color: color-mix(in srgb, var(--md-primary) 25%, transparent);
 }
 .feature-accent .feature-index,
 .feature-accent .feature-link { color: var(--md-on-primary-c); }
@@ -264,7 +265,7 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .feature-mark {
   position: absolute;
   right: 2rem; bottom: 1rem;
-  color: var(--md-secondary);
+  color: var(--md-tertiary);
   font-size: 6rem;
   line-height: 1;
   opacity: .35;
@@ -305,7 +306,7 @@ h1 em { color: var(--md-primary); font-style: normal; }
   text-transform: uppercase;
   letter-spacing: .08em;
 }
-.screenshots figcaption span { color: var(--md-primary); }
+.screenshots figcaption span { color: var(--md-tertiary); }
 .gallery-controls { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
 .locale-button {
   cursor: pointer;
@@ -319,8 +320,8 @@ h1 em { color: var(--md-primary); font-style: normal; }
 }
 .locale-button:hover, .locale-button.active {
   background: var(--md-surface-3);
-  border-color: var(--md-secondary);
-  color: var(--md-secondary);
+  border-color: var(--md-tertiary);
+  color: var(--md-tertiary);
 }
 .locale-picker select {
   padding: .5rem .7rem;
@@ -330,7 +331,7 @@ h1 em { color: var(--md-primary); font-style: normal; }
   color: var(--md-on-surface);
   font: .72rem 'Roboto Mono', monospace;
 }
-.locale-picker select:focus, .locale-button:focus { outline: 2px solid var(--md-secondary); outline-offset: 2px; }
+.locale-picker select:focus, .locale-button:focus { outline: 2px solid var(--md-tertiary); outline-offset: 2px; }
 
 /* ─── download ─── */
 .download-section { padding: 8rem 0; }
