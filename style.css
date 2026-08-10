@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap');
 
 :root {
-  /* Exact app dark theme tokens (values-night/colors.xml) */
-  --md-bg:           #0C0E11;
-  --md-surface:      #171A1D;
-  --md-surface-2:    #1D2023;
-  --md-surface-3:    #242629;
-  --md-on-surface:   #E4E5E9;
-  --md-on-surface-v: #929397;
-  --md-outline:      #747579;
-  --md-outline-v:    #46484B;
-  /* primary = app primary (#91C3F4 steel blue) */
-  --md-primary:      #91C3F4;
-  --md-on-primary:   #003E63;
-  --md-primary-c:    #004770;   /* primaryContainer dark */
-  --md-on-primary-c: #C3DDFF;
-  /* tertiary = fox amber */
-  --md-tertiary:     #FFC697;
-  --md-on-tertiary:  #6C3B02;
-  --md-tertiary-c:   #603300;
+  /* Exact Fox theme — from logo SVGs + AplColorsFox.darkDefault */
+  --md-bg:           #0b1220;
+  --md-surface:      #111f30;
+  --md-surface-2:    #162438;
+  --md-surface-3:    #1c2d40;
+  --md-on-surface:   #f8fafc;
+  --md-on-surface-v: #8aafc8;
+  --md-outline:      #4d7a9e;
+  --md-outline-v:    #1e3a55;
+  /* primary = sky blue #4db3ec */
+  --md-primary:      #4db3ec;
+  --md-on-primary:   #001e30;
+  --md-primary-c:    #1a4a6e;
+  --md-on-primary-c: #bde3ff;
+  /* tertiary = fox orange #f96316 */
+  --md-tertiary:     #f96316;
+  --md-on-tertiary:  #2a1200;
+  --md-tertiary-c:   #4a2200;
   /* shape */
   --r-xs:  4px;
   --r-sm:  12px;
@@ -98,14 +98,7 @@ nav a:hover, .site-footer a:hover, .trust-copy a:hover { color: var(--md-tertiar
   letter-spacing: .14em;
   text-transform: uppercase;
 }
-.status-dot {
-  display: inline-block;
-  width: 8px; height: 8px;
-  margin-right: .4rem;
-  border-radius: 50%;
-  background: var(--md-tertiary);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--md-tertiary) 20%, transparent);
-}
+.status-dot { display: none; }
 h1, h2, h3, p { text-wrap: pretty; }
 h1 {
   max-width: 640px;
@@ -400,3 +393,25 @@ h1 em { color: var(--md-primary); font-style: normal; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Plane flyover animation */
+.plane-fly {
+  position: absolute;
+  top: 18%;
+  left: -60px;
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: flyover 18s linear infinite;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--md-primary) 60%, transparent));
+  z-index: 0;
+}
+.plane-fly:nth-child(2) { animation-delay: 7s; top: 32%; font-size: 1.1rem; opacity: 0; }
+.plane-fly:nth-child(3) { animation-delay: 13s; top: 12%; font-size: .9rem; opacity: 0; }
+
+@keyframes flyover {
+  0%   { left: -60px; opacity: 0; }
+  5%   { opacity: .55; }
+  90%  { opacity: .4; }
+  100% { left: calc(100% + 80px); opacity: 0; }
+}
