@@ -12,7 +12,8 @@
   <meta property="og:url" content="https://taynotfound.github.io/skyfox-website/">
   <meta property="og:image" content="assets/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/SkyFox_Monochrome.svg">
+  <link rel="apple-touch-icon" href="assets/SkyFox_Monochrome.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,17 +31,18 @@
       <a href="https://github.com/taynotfound/skyfox" rel="noreferrer">Source</a>
       <a class="nav-cta" href="https://github.com/taynotfound/skyfox/releases/tag/nightly" rel="noreferrer">Get the APK <span aria-hidden="true">↗</span></a>
     </nav>
+    <label class="locale-picker"><span class="sr-only">Language</span><select id="locale" aria-label="Language"><option value="en">English</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="es">Español</option><option value="it">Italiano</option><option value="ru">Русский</option></select></label>
   </header>
 
   <main id="top">
     <section class="hero wrap">
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span> Live flight tracking for Android</p>
-        <h1>Keep your eyes on the <em>sky.</em></h1>
-        <p class="lede">SkyFox is a fast, privacy-friendly flight tracker for people who want the aircraft, not the account system around it.</p>
+        <h1 data-i18n="heroTitle">Keep your eyes on the sky.</h1>
+        <p class="lede" data-i18n="heroLede">SkyFox is a fast, privacy-friendly flight tracker for people who want the aircraft, not the account system around it.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="https://github.com/taynotfound/skyfox/releases/tag/nightly" rel="noreferrer">Download the latest APK <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#screens">See it in action <span aria-hidden="true">↓</span></a>
+          <a class="button button-primary" data-i18n="download" href="https://github.com/taynotfound/skyfox/releases/tag/nightly" rel="noreferrer">Download the latest APK <span aria-hidden="true">↗</span></a>
+          <a class="text-link" data-i18n="seeInAction" href="#screens">See it in action <span aria-hidden="true">↓</span></a>
         </div>
         <p class="microcopy">Free and open source. No account required.</p>
       </div>
@@ -97,15 +99,11 @@
       <div class="wrap">
         <div class="section-heading screens-heading">
           <p class="eyebrow">A focused cockpit</p>
-          <h2>Less ceremony. More aircraft.</h2>
-          <p>These are real SkyFox screens from the app, not mockups.</p>
+          <h2 data-i18n="galleryTitle">Less ceremony. More aircraft.</h2>
+          <p data-i18n="galleryIntro">These are real SkyFox screens from the app, not mockups.</p>
         </div>
-        <div class="screenshots">
-          <figure><img src="assets/screenshots/1-map.png" alt="SkyFox live aircraft map" loading="lazy"><figcaption><span>01</span> Live map</figcaption></figure>
-          <figure><img src="assets/screenshots/2-search.png" alt="SkyFox aircraft search results" loading="lazy"><figcaption><span>02</span> Search</figcaption></figure>
-          <figure><img src="assets/screenshots/3-watch.png" alt="SkyFox watchlist" loading="lazy"><figcaption><span>03</span> Watchlist</figcaption></figure>
-          <figure><img src="assets/screenshots/4-feeders.png" alt="SkyFox feeder monitoring" loading="lazy"><figcaption><span>04</span> Feeders</figcaption></figure>
-        </div>
+        <div class="gallery-controls" role="group" aria-label="Screenshot language"><button class="locale-button active" data-gallery-locale="en">English</button><button class="locale-button" data-gallery-locale="de">Deutsch</button><button class="locale-button" data-gallery-locale="fr">Français</button><button class="locale-button" data-gallery-locale="es">Español</button><button class="locale-button" data-gallery-locale="it">Italiano</button><button class="locale-button" data-gallery-locale="ru">Русский</button></div>
+        <div class="screenshots" id="gallery"></div>
       </div>
     </section>
 
@@ -117,7 +115,7 @@
           <h2>Install SkyFox.<br>Start spotting.</h2>
           <p>The latest FOSS debug APK is published to the nightly release. Builds are made in GitHub Actions from the public source.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/taynotfound/skyfox/releases/tag/nightly" rel="noreferrer">Download APK <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" data-i18n="downloadShort" href="https://github.com/taynotfound/skyfox/releases/tag/nightly" rel="noreferrer">Download APK <span aria-hidden="true">↗</span></a>
             <a class="button button-secondary" href="https://github.com/taynotfound/skyfox" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -131,7 +129,7 @@
       </div>
       <div class="trust-copy">
         <p>SkyFox is an independent project based on the airplanes.live Android app. It uses airplanes.live data and is not affiliated with or endorsed by airplanes.live.</p>
-        <p>It is maintained by <a href="https://github.com/taynotfound" rel="noreferrer">Tay März</a>. Read the code, inspect the builds, or help make the next release better.</p>
+        <p>It is maintained by <a href="https://taymaerz.de" rel="noreferrer">Tay März</a>. Read the code, inspect the builds, or help make the next release better.</p>
       </div>
     </section>
   </main>
