@@ -419,3 +419,29 @@ h1 em { color: var(--md-primary); font-style: normal; }
   90%  { opacity: .4; }
   100% { left: calc(100% + 80px); opacity: 0; }
 }
+
+/* Release badge */
+.release-badge {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+.release-tag {
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  color: var(--md-primary);
+  background: color-mix(in srgb, var(--md-primary) 12%, transparent);
+  padding: .2em .6em;
+  border-radius: var(--r-xs);
+  border: 1px solid color-mix(in srgb, var(--md-primary) 30%, transparent);
+  white-space: nowrap;
+}
+.release-notes-link {
+  font-size: .85rem;
+  color: var(--md-on-surface-v);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.release-notes-link:hover { color: var(--md-on-surface); }

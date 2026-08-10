@@ -36,6 +36,8 @@ const locales = {
     feat4P: "Registration, operator, route, live position, registry data. Emergency SQUAWKs flagged automatically.",
     feat4Link: "Read the code ↗",
     screensEyebrow: "In the cockpit",
+    downloadBtn: 'Download APK',
+    downloadChangelog: "What's new",
     downloadEyebrow: "Get it",
     downloadH2: "Install SkyFox.",
     downloadP: "Nightly APK built from source in GitHub Actions.",
@@ -85,6 +87,8 @@ const locales = {
     feat4P: "Registrierung, Betreiber, Route, Live-Position, Registrierungsdaten. Notfall-SQUAWKs werden automatisch markiert.",
     feat4Link: "Code ansehen ↗",
     screensEyebrow: "Im Cockpit",
+    downloadBtn: 'APK herunterladen',
+    downloadChangelog: 'Was ist neu',
     downloadEyebrow: "Holen",
     downloadH2: "SkyFox installieren.",
     downloadP: "Nächtliche APK aus dem Quellcode in GitHub Actions gebaut.",
@@ -134,6 +138,8 @@ const locales = {
     feat4P: "Immatriculation, opérateur, route, position en direct, données du registre. SQUAWKs d'urgence signalés automatiquement.",
     feat4Link: "Voir le code ↗",
     screensEyebrow: "Dans le cockpit",
+    downloadBtn: 'Télécharger APK',
+    downloadChangelog: 'Quoi de neuf',
     downloadEyebrow: "Obtenir",
     downloadH2: "Installer SkyFox.",
     downloadP: "APK nocturne compilé depuis les sources dans GitHub Actions.",
@@ -183,6 +189,8 @@ const locales = {
     feat4P: "Matrícula, operador, ruta, posición en vivo, datos del registro. SQUAWKs de emergencia marcados automáticamente.",
     feat4Link: "Ver el código ↗",
     screensEyebrow: "En el cockpit",
+    downloadBtn: 'Descargar APK',
+    downloadChangelog: 'Novedades',
     downloadEyebrow: "Obtener",
     downloadH2: "Instalar SkyFox.",
     downloadP: "APK nocturna compilada desde el código fuente en GitHub Actions.",
@@ -232,6 +240,8 @@ const locales = {
     feat4P: "Immatricolazione, operatore, rotta, posizione live, dati del registro. SQUAWKs di emergenza segnalati automaticamente.",
     feat4Link: "Leggi il codice ↗",
     screensEyebrow: "In cabina di pilotaggio",
+    downloadBtn: 'Scarica APK',
+    downloadChangelog: 'Novità',
     downloadEyebrow: "Scarica",
     downloadH2: "Installa SkyFox.",
     downloadP: "APK notturna compilata dal sorgente in GitHub Actions.",
@@ -292,3 +302,20 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
+
+// Latest release badge
+async function loadRelease() {
+  try {
+    const r = await fetch('https://api.github.com/repos/taynotfound/skyfox/releases/latest');
+    const d = await r.json();
+    if (!d.tag_name) return;
+    const tag = document.getElementById('release-tag');
+    const dl  = document.getElementById('release-dl');
+    const notes = document.getElementById('release-notes');
+    const apk = d.assets?.find(a => a.name.endsWith('.apk'));
+    if (tag) tag.textContent = d.tag_name;
+    if (dl && apk) dl.href = apk.browser_download_url;
+    if (notes) notes.href = d.html_url;
+  } catch(_) {}
+}
+document.addEventListener('DOMContentLoaded', loadRelease);
