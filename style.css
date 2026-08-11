@@ -347,9 +347,11 @@ h1 em { color: var(--md-primary); font-style: normal; }
   color: var(--md-on-primary);
   border-radius: var(--r-xl);
 }
-.download-card .eyebrow { color: color-mix(in srgb, var(--md-on-primary) 60%, transparent); }
-.download-card h2 { color: var(--md-on-primary); }
-.download-card p:not(.eyebrow) { max-width: 560px; color: color-mix(in srgb, var(--md-on-primary) 75%, transparent); }
+.download-card .eyebrow { color: #063c58; }
+.download-card h2 { color: #001e30; }
+.download-card p:not(.eyebrow) { max-width: 560px; color: #063c58; }
+.download-card .download-tier p,
+.download-card .download-tier .tier-note { color: var(--md-on-bg); }
 .download-card .button-primary { background: var(--md-on-primary); border: none; color: var(--md-primary); }
 .download-card .button-secondary {
   background: color-mix(in srgb, var(--md-on-primary) 12%, transparent);
@@ -587,6 +589,12 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .install-steps li { margin-bottom: .5rem; line-height: 1.6; }
 .install-note { margin: 0; color: var(--md-on-surface-v); font-size: .82rem; }
 .install-note a { color: var(--md-primary); }
+
+.download-card .install-guide summary { color: #063c58; }
+.download-card .install-steps { color: #001e30; }
+.download-card .install-note { color: #063c58; }
+.download-card .install-note a,
+.download-card .download-meta a { color: #001e30; }
 
 /* ── Screenshot gallery ───────────────────────── */
 .screens-section { padding: 5rem 0; }
