@@ -1,21 +1,22 @@
-# SkyFox website
+# SkyFox website — Material 3 Expressive redesign
 
-The public marketing site for [SkyFox](https://github.com/taynotfound/skyfox), a fast, privacy-friendly flight tracker for Android.
+Static HTML/CSS/JS marketing site for SkyFox.
 
-Static HTML, CSS, and JavaScript. No framework and no build step.
-
-## Local preview
+## Preview
 
 ```bash
 python3 -m http.server 4173
 ```
 
-Then open <http://localhost:4173>.
+Open `http://localhost:4173`.
 
-## Deploy
+## Design direction
 
-The `deploy.yml` workflow publishes `main` to GitHub Pages.
-
-## Content note
-
-The app screenshots in `assets/screenshots/` are real Play Store screenshot exports from the SkyFox Android repository. SkyFox uses airplanes.live data and is independent from, not affiliated with or endorsed by, airplanes.live.
+- SkyFox Fox dark color roles, matched to the app palette
+- Material 3 Expressive-inspired tonal containment rather than decorative outlines
+- Contrasting, asymmetric corner shapes for hierarchy
+- Roboto Flex typography with expressive scale
+- Product-specific hero and aircraft-focused decorative moments
+- Restrained spring-like motion, with `prefers-reduced-motion` support
+- Responsive large-screen and mobile compositions
+- No framework or build step

@@ -1,550 +1,70 @@
-const locales = {
-  en: {
-    navFeatures: `Features`,
-    navScreens: `Screenshots`,
-    navDownload: `Download`,
-    navFaq: `FAQ`,
-    navSource: `GitHub`,
-    navCta: `Get SkyFox`,
-    heroEyebrow: `Free & open-source flight tracking for Android`,
-    heroTitle: `Live flight tracking, built for plane spotters.`,
-    heroLede: `Track nearby aircraft, search by callsign, registration or HEX, build watchlists and get alerts. Free, open source and no account required.`,
-    download: `Download SkyFox for Android`,
-    seeInAction: `See it in action`,
-    heroMicrocopy: `Free and open source. No account required.`,
-    trustFree: `Free`,
-    trustOss: `Open source`,
-    trustNoAccount: `No account`,
-    trustPrivate: `Privacy-friendly`,
-    signalOne: `Map first.`,
-    signalOneDesc: `What's flying near you, right now.`,
-    signalTwo: `Search deep.`,
-    signalTwoDesc: `HEX, callsign, registration, airframe, SQUAWK.`,
-    signalThree: `Stay private.`,
-    signalThreeDesc: `No account needed to start spotting.`,
-    featuresEyebrow: `Built for looking up`,
-    featuresH2: `The useful parts of flight tracking.`,
-    feat1Label: `01 / LIVE MAP`,
-    feat1H3: `See what's overhead.`,
-    feat1P: `Live aircraft on a clear interactive map. Selectable layers, location controls, filters and a focused detail view per aircraft.`,
-    feat2Label: `02 / SEARCH`,
-    feat2H3: `Find the aircraft you just saw.`,
-    feat2P: `Search by HEX, callsign, registration, airframe type or SQUAWK and jump straight to its details.`,
-    feat3Label: `03 / WATCHLISTS`,
-    feat3H3: `Keep tabs on the interesting ones.`,
-    feat3P: `Watch specific aircraft, ICAO addresses, callsigns, registrations or SQUAWKs and receive alerts when they appear.`,
-    feat4Label: `04 / AIRCRAFT DETAILS`,
-    feat4H3: `Know exactly what you're looking at.`,
-    feat4P: `Registration, operator, route, altitude, speed, heading, vertical rate, registry details and emergency squawk status.`,
-    feat4Link: `View source →`,
-    feat5Label: `05 / ALERTS`,
-    feat5H3: `Get alerted when something interesting appears.`,
-    feat5P: `Set alerts for aircraft nearby, specific registrations, callsigns, SQUAWK codes or locations — including emergency squawks 7500, 7600, 7700.`,
-    feat6Label: `06 / FEEDERS`,
-    feat6H3: `Running an airplanes.live feeder?`,
-    feat6P: `Monitor your feeder status and receive offline notifications if it goes down, straight from the app.`,
-    screensEyebrow: `Real app. Real aircraft.`,
-    galleryTitle: `Less ceremony.<br>More aircraft.`,
-    galleryIntro: `From spotting an aircraft overhead to finding it again later, SkyFox keeps the useful stuff close.`,
-    downloadEyebrow: `Free & open source`,
-    downloadH2: `Download SkyFox for Android.`,
-    downloadBtn: `Download APK`,
-    downloadChangelog: `What's new`,
-    downloadShort: `Download APK`,
-    downloadViewGithub: `View GitHub`,
-    downloadP: `Built in GitHub Actions from the public source. FOSS flavor, no proprietary dependencies.`,
-    downloadMeta: `Built in GitHub Actions from the public source. FOSS flavor, no proprietary dependencies.`,
-    dlTierStableLabel: `Latest Release`,
-    dlTierStableNote: `Requires Android 8.0 (API 26) or newer.`,
-    dlTierNightlyLabel: `Nightly / Development`,
-    dlTierNightlyBtn: `Get nightly build`,
-    dlTierNightlyNote: `Built from the latest commit. May be unstable. For testers and developers.`,
-    trustEyebrow: `Open, independent, honest`,
-    trustH2: `No surprises.`,
-    trustP1: `SkyFox is an independent project based on the airplanes.live Android app by d4rken (GPL). Aircraft data is provided by airplanes.live. SkyFox is not affiliated with or endorsed by airplanes.live.`,
-    trustP2: `Maintained by`,
-    trustPrivacyLink: `Privacy policy`,
-    faqEyebrow: `FAQ`,
-    faqH2: `Common questions.`,
-    faq1Q: `What is SkyFox?`,
-    faq1A: `SkyFox is a free, open-source Android app for tracking live aircraft. It uses ADS-B data from airplanes.live to show nearby flights on an interactive map, with search, watchlists and alerts.`,
-    faq2Q: `Is it free?`,
-    faq2A: `Yes. SkyFox is free to download and use with no in-app purchases or subscriptions.`,
-    faq3Q: `Do I need an account?`,
-    faq3A: `No. SkyFox works without any account or registration.`,
-    faq4Q: `Where does the aircraft data come from?`,
-    faq4A: `Aircraft data is provided by airplanes.live, a community-driven ADS-B network with feeders around the world. SkyFox is independent and not affiliated with airplanes.live.`,
-    faq5Q: `Is SkyFox affiliated with airplanes.live?`,
-    faq5A: `No. SkyFox is an independent open-source project. It uses airplanes.live as a data source but is not affiliated with, endorsed by, or operated by airplanes.live.`,
-    faq6Q: `Why does the app need location permission?`,
-    faq6A: `Location permission is used to show aircraft near your current position and to center the map on you. It is not required — you can decline it and pan the map manually.`,
-    faq7Q: `How do I install the APK?`,
-    faq7A: `Download the APK, open it on your Android device and follow the install prompt. You may need to enable installation from unknown sources in your device settings.`,
-    faq8Q: `Is SkyFox available on iOS?`,
-    faq8A: `No. SkyFox is Android-only.`,
-    footerTagline: `Keep your eyes on the sky.`,
-    footerReleases: `Releases`,
-    footerPrivacy: `Privacy`,
-    footerIssues: `Issues`,
-  },
-  de: {
-    navFeatures: `Was es kann`,
-    navScreens: `Screenshots`,
-    navDownload: `Download`,
-    navFaq: `FAQ`,
-    navSource: `GitHub`,
-    navCta: `SkyFox laden`,
-    heroEyebrow: `Kostenloser Open-Source-Flugtracker für Android`,
-    heroTitle: `Live-Flugverfolgung für Planespotter.`,
-    heroLede: `Verfolge Flugzeuge in Echtzeit, suche nach Rufzeichen, Kennung oder HEX, erstelle Beobachtungslisten und erhalte Alarme. Kostenlos, Open Source, kein Konto erforderlich.`,
-    download: `SkyFox für Android laden`,
-    seeInAction: `In Aktion sehen`,
-    heroMicrocopy: `Kostenlos und Open Source. Kein Konto erforderlich.`,
-    trustFree: `Kostenlos`,
-    trustOss: `Open Source`,
-    trustNoAccount: `Kein Konto`,
-    trustPrivate: `Datenschutzfreundlich`,
-    signalOne: `Karte zuerst.`,
-    signalOneDesc: `Was gerade in deiner Nähe fliegt.`,
-    signalTwo: `Tief suchen.`,
-    signalTwoDesc: `HEX, Rufzeichen, Kennung, Typ, SQUAWK.`,
-    signalThree: `Privat bleiben.`,
-    signalThreeDesc: `Kein Konto zum Spotten erforderlich.`,
-    featuresEyebrow: `Zum Hochschauen gemacht`,
-    featuresH2: `Die nützlichen Teile der Flugverfolgung.`,
-    feat1Label: `01 / LIVE-KARTE`,
-    feat1H3: `Sieh, was über dir fliegt.`,
-    feat1P: `Live-Flugzeuge auf einer übersichtlichen interaktiven Karte. Auswählbare Ebenen, Standortsteuerung, Filter und eine fokussierte Detailansicht.`,
-    feat2Label: `02 / SUCHE`,
-    feat2H3: `Finde das Flugzeug, das du gerade gesehen hast.`,
-    feat2P: `Suche nach HEX, Rufzeichen, Kennung, Typ oder SQUAWK und springe direkt zu den Details.`,
-    feat3Label: `03 / BEOBACHTUNGSLISTEN`,
-    feat3H3: `Behalte die interessanten im Blick.`,
-    feat3P: `Beobachte Flugzeuge, ICAO-Adressen, Rufzeichen, Kennzeichen oder SQUAWKs und erhalte Alarme.`,
-    feat4Label: `04 / FLUGZEUGDETAILS`,
-    feat4H3: `Wisse genau, was über dir ist.`,
-    feat4P: `Kennung, Betreiber, Route, Höhe, Geschwindigkeit, Kurs, Steigrate, Registerdetails und Notfall-SQUAWK-Status.`,
-    feat4Link: `Quellcode ansehen →`,
-    feat5Label: `05 / ALARME`,
-    feat5H3: `Benachrichtigt werden, wenn etwas Interessantes erscheint.`,
-    feat5P: `Alarme für Flugzeuge in der Nähe, bestimmte Kennzeichen, Rufzeichen, SQUAWK-Codes oder Standorte — einschließlich 7500, 7600, 7700.`,
-    feat6Label: `06 / FEEDER`,
-    feat6H3: `Betreibst du einen airplanes.live-Feeder?`,
-    feat6P: `Überwache deinen Feeder-Status und erhalte Offline-Benachrichtigungen, wenn er ausfällt.`,
-    screensEyebrow: `Echte App. Echte Flugzeuge.`,
-    galleryTitle: `Weniger Schnickschnack.<br>Mehr Flugzeuge.`,
-    galleryIntro: `Vom Flugzeug über dir bis zum Wiederfinden später: SkyFox hält das Nützliche nah.`,
-    downloadEyebrow: `Kostenlos & Open Source`,
-    downloadH2: `SkyFox für Android laden.`,
-    downloadBtn: `APK laden`,
-    downloadChangelog: `Was ist neu`,
-    downloadShort: `APK laden`,
-    downloadViewGithub: `GitHub ansehen`,
-    downloadP: `In GitHub Actions aus dem öffentlichen Quellcode erstellt. FOSS-Variante, keine proprietären Abhängigkeiten.`,
-    downloadMeta: `In GitHub Actions aus dem öffentlichen Quellcode erstellt.`,
-    dlTierStableLabel: `Aktuelle Version`,
-    dlTierStableNote: `Erfordert Android 8.0 (API 26) oder neuer.`,
-    dlTierNightlyLabel: `Nightly / Entwicklung`,
-    dlTierNightlyBtn: `Nightly-Build laden`,
-    dlTierNightlyNote: `Aus dem neuesten Commit erstellt. Kann instabil sein. Für Tester und Entwickler.`,
-    trustEyebrow: `Offen, unabhängig, ehrlich`,
-    trustH2: `Keine Überraschungen.`,
-    trustP1: `SkyFox ist ein unabhängiges Projekt, das auf der airplanes.live Android-App von d4rken (GPL) basiert. Flugzeugdaten werden von airplanes.live bereitgestellt. SkyFox ist nicht mit airplanes.live verbunden.`,
-    trustP2: `Betreut von`,
-    trustPrivacyLink: `Datenschutzrichtlinie`,
-    faqEyebrow: `FAQ`,
-    faqH2: `Häufige Fragen.`,
-    faq1Q: `Was ist SkyFox?`,
-    faq1A: `SkyFox ist eine kostenlose Open-Source-Android-App zur Verfolgung von Live-Flugzeugen. Sie nutzt ADS-B-Daten von airplanes.live mit Suche, Beobachtungslisten und Alarmen.`,
-    faq2Q: `Ist es kostenlos?`,
-    faq2A: `Ja. SkyFox ist kostenlos, ohne In-App-Käufe oder Abonnements.`,
-    faq3Q: `Brauche ich ein Konto?`,
-    faq3A: `Nein. SkyFox funktioniert ohne Konto oder Registrierung.`,
-    faq4Q: `Woher kommen die Flugzeugdaten?`,
-    faq4A: `Flugzeugdaten werden von airplanes.live bereitgestellt, einem gemeinschaftlich betriebenen ADS-B-Netzwerk. SkyFox ist unabhängig und nicht mit airplanes.live verbunden.`,
-    faq5Q: `Ist SkyFox mit airplanes.live verbunden?`,
-    faq5A: `Nein. SkyFox ist ein unabhängiges Open-Source-Projekt. Es nutzt airplanes.live als Datenquelle, ist aber nicht damit verbunden.`,
-    faq6Q: `Warum benötigt die App die Standortberechtigung?`,
-    faq6A: `Die Standortberechtigung zeigt Flugzeuge in deiner Nähe und zentriert die Karte auf dich. Sie ist nicht erforderlich — du kannst sie ablehnen und die Karte manuell verschieben.`,
-    faq7Q: `Wie installiere ich die APK?`,
-    faq7A: `Lade die APK herunter, öffne sie auf deinem Android-Gerät und folge der Installationsaufforderung. Du musst möglicherweise die Installation aus unbekannten Quellen aktivieren.`,
-    faq8Q: `Ist SkyFox für iOS verfügbar?`,
-    faq8A: `Nein. SkyFox ist nur für Android.`,
-    footerTagline: `Behalte den Himmel im Blick.`,
-    footerReleases: `Versionen`,
-    footerPrivacy: `Datenschutz`,
-    footerIssues: `Probleme`,
-  },
-  fr: {
-    navFeatures: `Fonctionnalités`,
-    navScreens: `Captures`,
-    navDownload: `Télécharger`,
-    navFaq: `FAQ`,
-    navSource: `GitHub`,
-    navCta: `Obtenir SkyFox`,
-    heroEyebrow: `Tracker de vols gratuit et open source pour Android`,
-    heroTitle: `Suivi de vols en direct, pour les spotteurs.`,
-    heroLede: `Suivez les aéronefs à proximité, recherchez par indicatif, immatriculation ou HEX, créez des listes de surveillance et recevez des alertes. Gratuit, open source, sans compte.`,
-    download: `Télécharger SkyFox pour Android`,
-    seeInAction: `Voir en action`,
-    heroMicrocopy: `Gratuit et open source. Aucun compte requis.`,
-    trustFree: `Gratuit`,
-    trustOss: `Open source`,
-    trustNoAccount: `Sans compte`,
-    trustPrivate: `Respecte la vie privée`,
-    signalOne: `La carte d'abord.`,
-    signalOneDesc: `Ce qui vole près de vous, maintenant.`,
-    signalTwo: `Recherche précise.`,
-    signalTwoDesc: `HEX, indicatif, immatriculation, type, SQUAWK.`,
-    signalThree: `Restez privé.`,
-    signalThreeDesc: `Aucun compte nécessaire pour spotter.`,
-    featuresEyebrow: `Fait pour lever les yeux`,
-    featuresH2: `Les fonctions utiles du suivi de vols.`,
-    feat1Label: `01 / CARTE EN DIRECT`,
-    feat1H3: `Voyez ce qui est au-dessus de vous.`,
-    feat1P: `Aéronefs en direct sur une carte interactive claire. Calques, contrôles de position, filtres et vue détaillée par aéronef.`,
-    feat2Label: `02 / RECHERCHE`,
-    feat2H3: `Trouvez l'aéronef que vous venez de voir.`,
-    feat2P: `Recherchez par HEX, indicatif, immatriculation, type ou SQUAWK et accédez directement aux détails.`,
-    feat3Label: `03 / LISTES DE SURVEILLANCE`,
-    feat3H3: `Gardez un oeil sur les intéressants.`,
-    feat3P: `Surveillez des aéronefs, adresses ICAO, indicatifs, immatriculations ou SQUAWKs avec alertes.`,
-    feat4Label: `04 / DÉTAILS DE L'AÉRONEF`,
-    feat4H3: `Sachez exactement ce que vous regardez.`,
-    feat4P: `Immatriculation, opérateur, route, altitude, vitesse, cap, taux vertical, détails du registre et statut squawk d'urgence.`,
-    feat4Link: `Voir le code source →`,
-    feat5Label: `05 / ALERTES`,
-    feat5H3: `Soyez alerté quand quelque chose d'intéressant apparaît.`,
-    feat5P: `Alertes pour aéronefs à proximité, immatriculations, indicatifs, codes squawk ou positions — y compris les squawks d'urgence 7500, 7600, 7700.`,
-    feat6Label: `06 / FEEDERS`,
-    feat6H3: `Vous gérez un feeder airplanes.live ?`,
-    feat6P: `Surveillez le statut de votre feeder et recevez des notifications hors ligne s'il tombe en panne.`,
-    screensEyebrow: `Vraie app. Vrais aéronefs.`,
-    galleryTitle: `Moins de cérémonie.<br>Plus d'aéronefs.`,
-    galleryIntro: `De l'aéronef aperçu au-dessus de vous à celui que vous retrouverez plus tard, SkyFox garde l'essentiel à portée de main.`,
-    downloadEyebrow: `Gratuit & open source`,
-    downloadH2: `Télécharger SkyFox pour Android.`,
-    downloadBtn: `Télécharger l'APK`,
-    downloadChangelog: `Nouveautés`,
-    downloadShort: `Télécharger l'APK`,
-    downloadViewGithub: `Voir GitHub`,
-    downloadP: `Construit dans GitHub Actions depuis le code source public. Variante FOSS, aucune dépendance propriétaire.`,
-    downloadMeta: `Construit dans GitHub Actions depuis le code source public.`,
-    dlTierStableLabel: `Dernière version`,
-    dlTierStableNote: `Nécessite Android 8.0 (API 26) ou supérieur.`,
-    dlTierNightlyLabel: `Nightly / Développement`,
-    dlTierNightlyBtn: `Télécharger le nightly`,
-    dlTierNightlyNote: `Construit depuis le dernier commit. Peut être instable. Pour testeurs et développeurs.`,
-    trustEyebrow: `Ouvert, indépendant, honnête`,
-    trustH2: `Pas de surprises.`,
-    trustP1: `SkyFox est un projet indépendant basé sur l'app Android airplanes.live de d4rken (GPL). Les données sont fournies par airplanes.live. SkyFox n'est pas affilié à airplanes.live.`,
-    trustP2: `Maintenu par`,
-    trustPrivacyLink: `Politique de confidentialité`,
-    faqEyebrow: `FAQ`,
-    faqH2: `Questions fréquentes.`,
-    faq1Q: `Qu'est-ce que SkyFox ?`,
-    faq1A: `SkyFox est une application Android gratuite et open source pour suivre les aéronefs en temps réel. Elle utilise les données ADS-B d'airplanes.live avec recherche, listes et alertes.`,
-    faq2Q: `Est-ce gratuit ?`,
-    faq2A: `Oui. SkyFox est gratuit, sans achats intégrés ni abonnements.`,
-    faq3Q: `Ai-je besoin d'un compte ?`,
-    faq3A: `Non. SkyFox fonctionne sans compte ni inscription.`,
-    faq4Q: `D'où viennent les données des aéronefs ?`,
-    faq4A: `Les données sont fournies par airplanes.live, un réseau ADS-B communautaire. SkyFox est indépendant et non affilié à airplanes.live.`,
-    faq5Q: `SkyFox est-il affilié à airplanes.live ?`,
-    faq5A: `Non. SkyFox est indépendant. Il utilise airplanes.live comme source de données mais n'y est pas affilié.`,
-    faq6Q: `Pourquoi l'app demande la localisation ?`,
-    faq6A: `Pour afficher les aéronefs à proximité et centrer la carte. Ce n'est pas obligatoire — vous pouvez refuser et déplacer la carte manuellement.`,
-    faq7Q: `Comment installer l'APK ?`,
-    faq7A: `Téléchargez l'APK, ouvrez-le sur votre appareil Android et suivez l'invite. Vous devrez peut-être activer l'installation depuis des sources inconnues.`,
-    faq8Q: `SkyFox est-il disponible sur iOS ?`,
-    faq8A: `Non. SkyFox est uniquement disponible sur Android.`,
-    footerTagline: `Gardez les yeux sur le ciel.`,
-    footerReleases: `Versions`,
-    footerPrivacy: `Confidentialité`,
-    footerIssues: `Signaler un problème`,
-  },
-  es: {
-    navFeatures: `Funciones`,
-    navScreens: `Capturas`,
-    navDownload: `Descargar`,
-    navFaq: `FAQ`,
-    navSource: `GitHub`,
-    navCta: `Obtener SkyFox`,
-    heroEyebrow: `Rastreador de vuelos gratuito y de código abierto para Android`,
-    heroTitle: `Seguimiento de vuelos en vivo, para spotteurs.`,
-    heroLede: `Rastrea aeronaves cercanas, busca por indicativo, matrícula o HEX, crea listas de seguimiento y recibe alertas. Gratuito, código abierto, sin cuenta.`,
-    download: `Descargar SkyFox para Android`,
-    seeInAction: `Ver en acción`,
-    heroMicrocopy: `Gratuito y de código abierto. No se requiere cuenta.`,
-    trustFree: `Gratis`,
-    trustOss: `Código abierto`,
-    trustNoAccount: `Sin cuenta`,
-    trustPrivate: `Respetuoso con la privacidad`,
-    signalOne: `Mapa primero.`,
-    signalOneDesc: `Lo que vuela cerca de ti, ahora mismo.`,
-    signalTwo: `Búsqueda profunda.`,
-    signalTwoDesc: `HEX, indicativo, matrícula, tipo, SQUAWK.`,
-    signalThree: `Mantén tu privacidad.`,
-    signalThreeDesc: `Sin cuenta para empezar a spottear.`,
-    featuresEyebrow: `Hecho para mirar al cielo`,
-    featuresH2: `Las partes útiles del seguimiento de vuelos.`,
-    feat1Label: `01 / MAPA EN VIVO`,
-    feat1H3: `Ve lo que está encima de ti.`,
-    feat1P: `Aeronaves en vivo en un mapa interactivo claro. Capas, controles de ubicación, filtros y vista detallada por aeronave.`,
-    feat2Label: `02 / BÚSQUEDA`,
-    feat2H3: `Encuentra la aeronave que acabas de ver.`,
-    feat2P: `Busca por HEX, indicativo, matrícula, tipo o SQUAWK y accede directamente a sus detalles.`,
-    feat3Label: `03 / LISTAS DE SEGUIMIENTO`,
-    feat3H3: `Vigila las interesantes.`,
-    feat3P: `Observa aeronaves, direcciones ICAO, indicativos, matrículas o SQUAWKs y recibe alertas.`,
-    feat4Label: `04 / DETALLES DE AERONAVE`,
-    feat4H3: `Sabe exactamente qué estás mirando.`,
-    feat4P: `Matrícula, operador, ruta, altitud, velocidad, rumbo, tasa vertical, detalles del registro y estado squawk de emergencia.`,
-    feat4Link: `Ver código fuente →`,
-    feat5Label: `05 / ALERTAS`,
-    feat5H3: `Recibe alertas cuando aparezca algo interesante.`,
-    feat5P: `Alertas para aeronaves cercanas, matrículas, indicativos, códigos SQUAWK o ubicaciones — incluidos squawks de emergencia 7500, 7600, 7700.`,
-    feat6Label: `06 / ALIMENTADORES`,
-    feat6H3: `¿Tienes un alimentador de airplanes.live?`,
-    feat6P: `Monitorea el estado de tu alimentador y recibe notificaciones sin conexión si se cae.`,
-    screensEyebrow: `App real. Aeronaves reales.`,
-    galleryTitle: `Menos ceremonia.<br>Más aeronaves.`,
-    galleryIntro: `De ver una aeronave sobre ti a encontrarla más tarde, SkyFox mantiene lo útil al alcance.`,
-    downloadEyebrow: `Gratuito y código abierto`,
-    downloadH2: `Descargar SkyFox para Android.`,
-    downloadBtn: `Descargar APK`,
-    downloadChangelog: `Novedades`,
-    downloadShort: `Descargar APK`,
-    downloadViewGithub: `Ver GitHub`,
-    downloadP: `Compilado en GitHub Actions desde el código fuente público. Variante FOSS, sin dependencias propietarias.`,
-    downloadMeta: `Compilado en GitHub Actions desde el código fuente público.`,
-    dlTierStableLabel: `Última versión`,
-    dlTierStableNote: `Requiere Android 8.0 (API 26) o superior.`,
-    dlTierNightlyLabel: `Nightly / Desarrollo`,
-    dlTierNightlyBtn: `Obtener build nightly`,
-    dlTierNightlyNote: `Compilado desde el último commit. Puede ser inestable. Para testers y desarrolladores.`,
-    trustEyebrow: `Abierto, independiente, honesto`,
-    trustH2: `Sin sorpresas.`,
-    trustP1: `SkyFox es un proyecto independiente basado en la app Android airplanes.live de d4rken (GPL). Los datos son proporcionados por airplanes.live. SkyFox no está afiliado a airplanes.live.`,
-    trustP2: `Mantenido por`,
-    trustPrivacyLink: `Política de privacidad`,
-    faqEyebrow: `Preguntas frecuentes`,
-    faqH2: `Preguntas frecuentes.`,
-    faq1Q: `¿Qué es SkyFox?`,
-    faq1A: `SkyFox es una app Android gratuita y de código abierto para rastrear aeronaves en tiempo real. Usa datos ADS-B de airplanes.live con búsqueda, listas y alertas.`,
-    faq2Q: `¿Es gratuito?`,
-    faq2A: `Sí. SkyFox es gratuito, sin compras dentro de la app ni suscripciones.`,
-    faq3Q: `¿Necesito una cuenta?`,
-    faq3A: `No. SkyFox funciona sin ninguna cuenta ni registro.`,
-    faq4Q: `¿De dónde vienen los datos de las aeronaves?`,
-    faq4A: `Los datos provienen de airplanes.live, una red ADS-B comunitaria. SkyFox es independiente y no está afiliado a airplanes.live.`,
-    faq5Q: `¿SkyFox está afiliado a airplanes.live?`,
-    faq5A: `No. SkyFox es independiente. Usa airplanes.live como fuente de datos pero no está afiliado.`,
-    faq6Q: `¿Por qué la app necesita permiso de ubicación?`,
-    faq6A: `Para mostrar aeronaves cercanas y centrar el mapa. No es obligatorio — puedes rechazarlo y mover el mapa manualmente.`,
-    faq7Q: `¿Cómo instalo el APK?`,
-    faq7A: `Descarga el APK, ábrelo en tu dispositivo Android y sigue el asistente. Es posible que debas habilitar la instalación desde fuentes desconocidas.`,
-    faq8Q: `¿SkyFox está disponible en iOS?`,
-    faq8A: `No. SkyFox es solo para Android.`,
-    footerTagline: `Mantén los ojos en el cielo.`,
-    footerReleases: `Versiones`,
-    footerPrivacy: `Privacidad`,
-    footerIssues: `Problemas`,
-  },
-  it: {
-    navFeatures: `Funzioni`,
-    navScreens: `Screenshot`,
-    navDownload: `Scarica`,
-    navFaq: `FAQ`,
-    navSource: `GitHub`,
-    navCta: `Ottieni SkyFox`,
-    heroEyebrow: `Tracker di voli gratuito e open source per Android`,
-    heroTitle: `Tracciamento voli in diretta, per gli spotter.`,
-    heroLede: `Traccia aeromobili nelle vicinanze, cerca per indicativo, immatricolazione o HEX, crea liste di sorveglianza e ricevi avvisi. Gratuito, open source, nessun account.`,
-    download: `Scarica SkyFox per Android`,
-    seeInAction: `Vedi in azione`,
-    heroMicrocopy: `Gratuito e open source. Nessun account richiesto.`,
-    trustFree: `Gratuito`,
-    trustOss: `Open source`,
-    trustNoAccount: `Nessun account`,
-    trustPrivate: `Privacy-friendly`,
-    signalOne: `Mappa prima.`,
-    signalOneDesc: `Cosa vola vicino a te, adesso.`,
-    signalTwo: `Ricerca approfondita.`,
-    signalTwoDesc: `HEX, indicativo, immatricolazione, tipo, SQUAWK.`,
-    signalThree: `Rimani privato.`,
-    signalThreeDesc: `Nessun account necessario per fare spotting.`,
-    featuresEyebrow: `Fatto per guardare in su`,
-    featuresH2: `Le parti utili del tracciamento voli.`,
-    feat1Label: `01 / MAPPA IN DIRETTA`,
-    feat1H3: `Guarda cosa c'è sopra di te.`,
-    feat1P: `Aeromobili in diretta su una mappa interattiva chiara. Livelli, controlli posizione, filtri e vista dettagliata per aeromobile.`,
-    feat2Label: `02 / RICERCA`,
-    feat2H3: `Trova l'aeromobile che hai appena visto.`,
-    feat2P: `Cerca per HEX, indicativo, immatricolazione, tipo o SQUAWK e accedi direttamente ai dettagli.`,
-    feat3Label: `03 / LISTE DI SORVEGLIANZA`,
-    feat3H3: `Tieni d'occhio quelli interessanti.`,
-    feat3P: `Monitora aeromobili, indirizzi ICAO, indicativi, immatricolazioni o SQUAWK con avvisi.`,
-    feat4Label: `04 / DETTAGLI AEROMOBILE`,
-    feat4H3: `Sai esattamente cosa stai guardando.`,
-    feat4P: `Immatricolazione, operatore, rotta, quota, velocità, prua, tasso verticale, dettagli registro e stato squawk di emergenza.`,
-    feat4Link: `Vedi il codice sorgente →`,
-    feat5Label: `05 / AVVISI`,
-    feat5H3: `Ricevi avvisi quando appare qualcosa di interessante.`,
-    feat5P: `Avvisi per aeromobili nelle vicinanze, immatricolazioni, indicativi, codici SQUAWK o posizioni — inclusi squawk di emergenza 7500, 7600, 7700.`,
-    feat6Label: `06 / FEEDER`,
-    feat6H3: `Gestisci un feeder airplanes.live?`,
-    feat6P: `Monitora lo stato del tuo feeder e ricevi notifiche offline se va offline.`,
-    screensEyebrow: `App reale. Aeromobili reali.`,
-    galleryTitle: `Meno cerimonie.<br>Più aeromobili.`,
-    galleryIntro: `Dal vedere un aeromobile sopra di te al ritrovarlo più tardi, SkyFox tiene a portata di mano ciò che serve.`,
-    downloadEyebrow: `Gratuito e open source`,
-    downloadH2: `Scarica SkyFox per Android.`,
-    downloadBtn: `Scarica APK`,
-    downloadChangelog: `Novità`,
-    downloadShort: `Scarica APK`,
-    downloadViewGithub: `Vedi GitHub`,
-    downloadP: `Compilato in GitHub Actions dal codice sorgente pubblico. Variante FOSS, nessuna dipendenza proprietaria.`,
-    downloadMeta: `Compilato in GitHub Actions dal codice sorgente pubblico.`,
-    dlTierStableLabel: `Ultima versione`,
-    dlTierStableNote: `Richiede Android 8.0 (API 26) o versioni successive.`,
-    dlTierNightlyLabel: `Nightly / Sviluppo`,
-    dlTierNightlyBtn: `Scarica nightly`,
-    dlTierNightlyNote: `Compilato dall'ultimo commit. Può essere instabile. Per tester e sviluppatori.`,
-    trustEyebrow: `Aperto, indipendente, onesto`,
-    trustH2: `Nessuna sorpresa.`,
-    trustP1: `SkyFox è un progetto indipendente basato sull'app Android airplanes.live di d4rken (GPL). I dati sono forniti da airplanes.live. SkyFox non è affiliato ad airplanes.live.`,
-    trustP2: `Mantenuto da`,
-    trustPrivacyLink: `Informativa sulla privacy`,
-    faqEyebrow: `FAQ`,
-    faqH2: `Domande frequenti.`,
-    faq1Q: `Cos'è SkyFox?`,
-    faq1A: `SkyFox è un'app Android gratuita e open source per tracciare aeromobili in tempo reale. Usa dati ADS-B da airplanes.live con ricerca, liste e avvisi.`,
-    faq2Q: `È gratuito?`,
-    faq2A: `Sì. SkyFox è gratuito, senza acquisti in-app né abbonamenti.`,
-    faq3Q: `Ho bisogno di un account?`,
-    faq3A: `No. SkyFox funziona senza account o registrazione.`,
-    faq4Q: `Da dove provengono i dati degli aeromobili?`,
-    faq4A: `I dati provengono da airplanes.live, una rete ADS-B gestita dalla comunità. SkyFox è indipendente e non affiliato ad airplanes.live.`,
-    faq5Q: `SkyFox è affiliato ad airplanes.live?`,
-    faq5A: `No. SkyFox è indipendente. Usa airplanes.live come fonte di dati ma non è affiliato.`,
-    faq6Q: `Perché l'app ha bisogno del permesso di localizzazione?`,
-    faq6A: `Per mostrare gli aeromobili vicini e centrare la mappa su di te. Non è obbligatorio — puoi rifiutarlo e spostare la mappa manualmente.`,
-    faq7Q: `Come installo l'APK?`,
-    faq7A: `Scarica l'APK, aprilo sul tuo dispositivo Android e segui la procedura. Potrebbe essere necessario abilitare l'installazione da fonti sconosciute.`,
-    faq8Q: `SkyFox è disponibile su iOS?`,
-    faq8A: `No. SkyFox è solo per Android.`,
-    footerTagline: `Tieni gli occhi sul cielo.`,
-    footerReleases: `Versioni`,
-    footerPrivacy: `Privacy`,
-    footerIssues: `Segnalazioni`,
-  },
-};
+(() => {
+  'use strict';
 
+  const localeSelect = document.getElementById('locale');
+  const pathLocale = location.pathname.split('/').filter(Boolean)[0];
+  const supported = ['en','de','fr','es','it'];
+  const currentLocale = supported.includes(pathLocale) ? pathLocale : 'en';
 
-let currentLocale = (() => {
-  const segment = location.pathname.split('/').filter(Boolean)[0];
-  return locales[segment] ? segment : 'en';
-})();
+  const t = {
+    en: {},
+    de: {
+      navFeatures:'Funktionen', navScreens:'Ansichten', navDownload:'Download', navFaq:'FAQ', navCta:'SkyFox holen',
+      heroEyebrow:'Kostenlos · Open Source · Android', heroTitle:'Schau hoch.<br><span>Wisse, was da fliegt.</span>', heroLede:'Ein schneller Flugtracker für Plane Spotter. Sieh Flugzeuge in deiner Nähe, suche nach den Details, die zählen, speichere interessante Maschinen und lass dich benachrichtigen.', download:'Für Android herunterladen', source:'Quellcode ansehen', trustFree:'100 % kostenlos', trustNoAccount:'Kein Account', trustPrivate:'Datenschutzfreundlich',
+      quick1Title:'Karte zuerst',quick1Text:'Sieh sofort, was über dir fliegt.',quick2Title:'Präzise Suche',quick2Text:'Callsign, HEX, Registrierung, Typ, Squawk.',quick3Title:'Privat bleiben',quick3Text:'Kein Account. Einfach losspotten.',
+      featuresEyebrow:'Für den Moment, in dem du hochschaust',featuresH2:'Die nützlichen Dinge.<br><span>Nichts im Weg.</span>',feat1Label:'LIVE-KARTE',feat1H3:'Sieh, was über dir fliegt.',feat1P:'Flugzeuge in deiner Nähe auf einer fokussierten interaktiven Karte mit Filtern, Ebenen, Standortsteuerung und schnellen Details.',feat2Label:'SUCHE',feat2H3:'Finde genau die Maschine wieder.',feat2P:'Suche nach Callsign, Registrierung, HEX, Flugzeugtyp oder Squawk.',feat3Label:'WATCHLISTS + ALARME',feat3H3:'Speichern. SkyFox hält Ausschau.',feat3P:'Beobachte Flugzeuge, Registrierungen, Callsigns oder Squawks und erhalte Hinweise, sobald etwas Interessantes auftaucht.',feat4Label:'FLUGZEUGDETAILS',feat4H3:'Wisse genau, was du vor dir hast.',feat4P:'Betreiber, Route, Höhe, Geschwindigkeit, Kurs, Vertikalrate, Registerdaten und Notfall-Squawks an einem Ort.',feat5Label:'FEEDER-STATUS',feat5H3:'Du speist airplanes.live?',feat5P:'Behalte deinen Feeder im Blick und werde benachrichtigt, wenn er offline geht.',
+      screensEyebrow:'Echte App-Ansichten',galleryTitle:'Weniger Drumherum.<br><span>Mehr Flugzeuge.</span>',galleryIntro:'Die Website nutzt dieselbe Fox-Palette und dasselbe Material-3-Expressive-Denken wie die App: tonale Flächen, starke Formen, klare Hierarchie und fast keine dekorativen Rahmen.',screen1Title:'Entdecken',screen1Text:'Sieh, was über dir fliegt.',screen2Title:'Finden',screen2Text:'Suche mit den Details, die du kennst.',screen3Title:'Verstehen',screen3Text:'Die wichtigen Daten auf einen Blick.',screen4Title:'Speichern',screen4Text:'Interessante Maschinen im Blick behalten.',
+      spotterEyebrow:'Für Plane Spotter gebaut',spotterH2:'Von „Was war das?“<br><span>zu „Da ist es.“</span>',spotterP:'SkyFox orientiert sich an den Fragen, die Spotter wirklich haben – nicht an Dashboards, die du erst konfigurieren musst.',scenario1Q:'Etwas Ungewöhnliches über dir?',scenario1A:'Karte öffnen und sofort identifizieren.',scenario2Q:'Du wartest auf ein bestimmtes Flugzeug?',scenario2A:'Beobachten und benachrichtigen lassen.',scenario3Q:'Nur einen Teil des Callsigns gesehen?',scenario3A:'Mit den bekannten Informationen suchen und eingrenzen.',
+      downloadEyebrow:'Kostenlos & Open Source',downloadH2:'Der Himmel<br><span>in deiner Tasche.</span>',downloadIntro:'Kein Play-Store-Account, kein Abo und keine Anmeldung. Lade die APK direkt von GitHub herunter.',latestRelease:'AKTUELLES RELEASE',androidRequirement:'Android 8.0+',downloadBtn:'APK herunterladen',changelog:'Release Notes ↗',nightly:'Nightly Builds ↗',buildYourself:'Selbst bauen ↗',value1Title:'Wirklich kostenlos',value1Text:'Keine Abos, Werbung oder In-App-Käufe.',value2Title:'Open Source',value2Text:'Der Code ist öffentlich. Prüfen, bauen, verbessern.',value3Title:'Kein Account',value3Text:'Flugtracking sollte nicht mit einem Registrierungsformular beginnen.',
+      faqH2:'Gut zu wissen.',faq1Q:'Was ist SkyFox?',faq1A:'SkyFox ist eine kostenlose Open-Source-Android-App für Live-Flugtracking mit ADS-B-Daten von airplanes.live.',faq2Q:'Brauche ich einen Account?',faq2A:'Nein. Du kannst SkyFox installieren und direkt nutzen, ohne ein Konto anzulegen.',faq3Q:'Woher kommen die Flugzeugdaten?',faq3A:'Die Daten stammen von airplanes.live, einem Community-basierten ADS-B-Netzwerk. SkyFox ist unabhängig und nicht mit airplanes.live verbunden oder von ihnen unterstützt.',faq4Q:'Warum braucht SkyFox den Standort?',faq4A:'Der Standort wird genutzt, um Flugzeuge in deiner Nähe zu zeigen und die Karte zu zentrieren. Du kannst die Berechtigung ablehnen und die Karte manuell bewegen.',faq5Q:'Gibt es SkyFox für iOS?',faq5A:'Nein. SkyFox ist aktuell nur für Android verfügbar.',
+      projectEyebrow:'Unabhängiges Projekt',projectTitle:'Offen darüber, was SkyFox ist.',footerTagline:'Keep your eyes on the sky.',footerReleases:'Releases',footerPrivacy:'Datenschutz',footerIssues:'Issues'
+    },
+    fr: { navFeatures:'Fonctions',navScreens:'Écrans',navDownload:'Télécharger',navFaq:'FAQ',navCta:'Obtenir SkyFox',heroEyebrow:'Gratuit · open source · Android',heroTitle:'Levez les yeux.<br><span>Sachez ce qui vole.</span>',heroLede:'Un suivi de vols rapide pensé pour les passionnés. Voyez les avions proches, cherchez les informations utiles, sauvegardez vos favoris et recevez des alertes.',download:'Télécharger pour Android',source:'Voir le code source',trustFree:'100 % gratuit',trustNoAccount:'Sans compte',trustPrivate:'Respectueux de la vie privée',featuresEyebrow:'Pensé pour le moment où vous levez les yeux',featuresH2:'L’utile.<br><span>Rien de superflu.</span>',screensEyebrow:'Vrais écrans de l’app',galleryTitle:'Moins de cérémonie.<br><span>Plus d’avions.</span>',downloadEyebrow:'Gratuit & open source',downloadH2:'Le ciel<br><span>dans votre poche.</span>',downloadBtn:'Télécharger l’APK',faqH2:'Bon à savoir.',footerPrivacy:'Confidentialité' },
+    es: { navFeatures:'Funciones',navScreens:'Pantallas',navDownload:'Descargar',navFaq:'FAQ',navCta:'Obtener SkyFox',heroEyebrow:'Gratis · código abierto · Android',heroTitle:'Mira arriba.<br><span>Descubre qué está volando.</span>',heroLede:'Un rastreador de vuelos rápido creado para spotters. Mira aviones cercanos, busca los datos importantes, guarda tus favoritos y recibe alertas.',download:'Descargar para Android',source:'Ver código fuente',trustFree:'100 % gratis',trustNoAccount:'Sin cuenta',trustPrivate:'Privado',featuresEyebrow:'Hecho para cuando miras al cielo',featuresH2:'Lo útil.<br><span>Nada estorba.</span>',screensEyebrow:'Pantallas reales',galleryTitle:'Menos ceremonia.<br><span>Más aviones.</span>',downloadEyebrow:'Gratis y código abierto',downloadH2:'El cielo<br><span>en tu bolsillo.</span>',downloadBtn:'Descargar APK',faqH2:'Conviene saberlo.',footerPrivacy:'Privacidad' },
+    it: { navFeatures:'Funzioni',navScreens:'Schermate',navDownload:'Download',navFaq:'FAQ',navCta:'Ottieni SkyFox',heroEyebrow:'Gratis · open source · Android',heroTitle:'Guarda in alto.<br><span>Scopri cosa sta volando.</span>',heroLede:'Un flight tracker veloce pensato per gli spotter. Vedi gli aerei vicini, cerca i dettagli che contano, salva quelli interessanti e ricevi avvisi.',download:'Scarica per Android',source:'Vedi sorgente',trustFree:'100% gratuito',trustNoAccount:'Nessun account',trustPrivate:'Privacy-friendly',featuresEyebrow:'Pensato per quando alzi lo sguardo',featuresH2:'Le cose utili.<br><span>Niente in mezzo.</span>',screensEyebrow:'Schermate reali',galleryTitle:'Meno cerimonia.<br><span>Più aerei.</span>',downloadEyebrow:'Gratis e open source',downloadH2:'Il cielo<br><span>in tasca.</span>',downloadBtn:'Scarica APK',faqH2:'Buono a sapersi.',footerPrivacy:'Privacy' }
+  };
 
-function applyLocale(locale) {
-  const strings = locales[locale] || locales.en;
-  document.documentElement.lang = locale;
+  document.documentElement.lang = currentLocale;
+  if (localeSelect) localeSelect.value = currentLocale;
+
+  const dict = t[currentLocale] || {};
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const value = strings[el.dataset.i18n];
-    if (value !== undefined) el.innerHTML = value;
+    const key = el.dataset.i18n;
+    if (dict[key]) el.innerHTML = dict[key];
   });
-  const picker = document.getElementById('locale');
-  if (picker) picker.value = locale;
-}
 
-// Screenshot gallery
-const galleryScreenshots = {
-  en: [
-    { file: 'map.png',          label: '01 — SPOT IT', caption: 'See what\'s flying above you.' },
-    { file: 'search.png',       label: '02 — FIND IT', caption: 'Search by registration, callsign, type and more.' },
-    { file: 'plane-details.png',label: '03 — KNOW IT', caption: 'Get the details without digging through menus.' },
-    { file: 'watch.png',        label: '04 — SAVE IT', caption: 'Keep the aircraft worth remembering close.' },
-  ],
-  de: [
-    { file: 'map.png',          label: '01 — SICHTEN', caption: 'Sieh, was über dir fliegt.' },
-    { file: 'search.png',       label: '02 — FINDEN', caption: 'Suche nach Kennung, Rufzeichen, Typ und mehr.' },
-    { file: 'plane-details.png',label: '03 — WISSEN', caption: 'Details, ohne dich durch Menüs zu arbeiten.' },
-    { file: 'watch.png',        label: '04 — MERKEN', caption: 'Behalte interessante Flugzeuge im Blick.' },
-  ],
-  fr: [
-    { file: 'map.png',          label: '01 — REPÉRER', caption: 'Voyez ce qui vole au-dessus de vous.' },
-    { file: 'search.png',       label: '02 — RETROUVER', caption: 'Recherchez par immatriculation, indicatif, type et plus.' },
-    { file: 'plane-details.png',label: '03 — COMPRENDRE', caption: 'Les détails, sans fouiller dans les menus.' },
-    { file: 'watch.png',        label: '04 — GARDER', caption: 'Gardez près de vous les aéronefs à retenir.' },
-  ],
-  es: [
-    { file: 'map.png',          label: '01 — LOCALÍZALO', caption: 'Mira qué vuela sobre ti.' },
-    { file: 'search.png',       label: '02 — ENCUÉNTRALO', caption: 'Busca por matrícula, indicativo, tipo y más.' },
-    { file: 'plane-details.png',label: '03 — CONÓCELO', caption: 'Consulta los detalles sin perderte en menús.' },
-    { file: 'watch.png',        label: '04 — GUÁRDALO', caption: 'Mantén cerca las aeronaves que recordar.' },
-  ],
-  it: [
-    { file: 'map.png',          label: '01 — AVVISTALO', caption: 'Guarda cosa vola sopra di te.' },
-    { file: 'search.png',       label: '02 — TROVALO', caption: 'Cerca per registrazione, nominativo, tipo e altro.' },
-    { file: 'plane-details.png',label: '03 — CONOSCILO', caption: 'Tutti i dettagli, senza scavare nei menu.' },
-    { file: 'watch.png',        label: '04 — SALVALO', caption: 'Tieni vicini gli aeromobili da ricordare.' },
-  ],
-};
-
-let currentGalleryLocale = 'en';
-
-function renderGallery(locale) {
-  const gallery = document.getElementById('gallery');
-  if (!gallery) return;
-  const shots = galleryScreenshots[locale] || galleryScreenshots['en'];
-  gallery.innerHTML = shots.map(s => `
-    <figure class="screenshot-item">
-      <img
-        src="/assets/screenshots/${locale}/${s.file}"
-        alt="${s.caption}"
-        loading="lazy"
-        onerror="this.closest('figure').style.display='none'"
-      >
-      <figcaption><strong>${s.label}</strong><span>${s.caption}</span></figcaption>
-    </figure>
-  `).join('');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  applyLocale(currentLocale);
-  const localePicker = document.getElementById('locale');
-  localePicker?.addEventListener('change', event => {
-    const locale = event.target.value;
-    applyLocale(locale);
-    currentGalleryLocale = locale;
-    renderGallery(locale);
+  localeSelect?.addEventListener('change', e => {
+    const next = e.target.value;
+    location.href = next === 'en' ? '/' : `/${next}/`;
   });
-  renderGallery(currentGalleryLocale);
 
-  document.querySelectorAll('.locale-button[data-gallery-locale]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.locale-button[data-gallery-locale]').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentGalleryLocale = btn.dataset.galleryLocale;
-      renderGallery(currentGalleryLocale);
-    });
-  });
-});
+  // Expressive but restrained entrance motion. No motion if user asks for reduced motion.
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduced && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in-view'));
+  }
 
-// Latest release badge
-async function loadRelease() {
-  try {
-    const r = await fetch('https://api.github.com/repos/taynotfound/skyfox/releases/latest');
-    const d = await r.json();
-    if (!d.tag_name) return;
-    const tag = document.getElementById('release-tag');
-    const dl  = document.getElementById('release-dl');
-    const notes = document.getElementById('release-notes');
-    const apk = d.assets?.find(a => a.name.endsWith('.apk'));
-    if (tag) tag.textContent = d.tag_name;
-    if (dl && apk) dl.href = apk.browser_download_url;
-    if (notes) notes.href = d.html_url;
-  } catch(_) {}
-}
-document.addEventListener('DOMContentLoaded', loadRelease);
+  // Fetch release metadata without making download depend on the API.
+  fetch('https://api.github.com/repos/taynotfound/skyfox/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(release => {
+      const tag = document.getElementById('release-tag');
+      const notes = document.getElementById('release-notes');
+      if (tag && release.tag_name) tag.textContent = release.tag_name;
+      if (notes && release.html_url) notes.href = release.html_url;
+      const apk = Array.isArray(release.assets) ? release.assets.find(a => /\.apk$/i.test(a.name)) : null;
+      const dl = document.getElementById('release-dl');
+      if (dl && apk?.browser_download_url) dl.href = apk.browser_download_url;
+    })
+    .catch(() => {});
+})();

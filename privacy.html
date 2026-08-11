@@ -6,122 +6,59 @@
   <title>Privacy Policy – SkyFox</title>
   <meta name="description" content="SkyFox privacy policy. What data the app uses, what permissions it needs, and what external services it contacts.">
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b1220">
   <link rel="canonical" href="https://skyfox.taymaerz.de/privacy">
-  <link rel="icon" type="image/svg+xml" href="assets/SkyFox_Monochrome.svg">
+  <link rel="icon" type="image/svg+xml" href="/assets/SkyFox_Monochrome.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,75..125,300..900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
   <style>
-    .prose { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
-    .prose h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0 0 .5rem; }
-    .prose .subtitle { color: var(--md-on-surface-v); font-size: .9rem; margin: 0 0 3rem; }
-    .prose h2 { font-size: 1.1rem; margin: 2.5rem 0 .5rem; color: var(--md-primary); text-transform: uppercase; letter-spacing: .06em; font-family: var(--font-mono); font-size: .8rem; }
-    .prose h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
-    .prose p, .prose li { line-height: 1.7; color: var(--md-on-surface); }
-    .prose ul { padding-left: 1.25rem; }
-    .prose li { margin-bottom: .3rem; }
-    .prose a { color: var(--md-primary); }
-    .prose hr { border: none; border-top: 1px solid var(--md-outline-v); margin: 2.5rem 0; }
-    .prose .back { display: inline-flex; align-items: center; gap: .4rem; font-size: .85rem; color: var(--md-on-surface-v); text-decoration: none; margin-bottom: 2.5rem; }
-    .prose .back:hover { color: var(--md-on-surface); }
-    .badge-optional { display: inline-block; font-size: .7rem; font-family: var(--font-mono); background: var(--md-surface-2); color: var(--md-on-surface-v); border-radius: 4px; padding: .1em .4em; vertical-align: middle; margin-left: .35rem; }
+    .privacy-main{padding:110px 0 120px;max-width:900px}.privacy-main h1{font-size:clamp(3rem,7vw,6rem)}
+    .privacy-subtitle{margin:18px 0 0;color:var(--muted);font:600 .76rem var(--mono);text-transform:uppercase;letter-spacing:.05em}
+    .privacy-body{margin-top:46px;padding:38px;background:var(--surface-high);border-radius:38px 38px 14px 38px}
+    .privacy-body h2{margin:44px 0 12px;color:var(--primary);font:700 .74rem var(--mono);letter-spacing:.12em;text-transform:uppercase}.privacy-body h2:first-of-type{margin-top:38px}
+    .privacy-body h3{margin:24px 0 6px;color:var(--text);font-size:1.05rem}.privacy-body p,.privacy-body li{color:var(--muted);line-height:1.72}.privacy-body a{color:var(--primary)}
+    .privacy-body hr{height:8px;border:0;margin:34px 0;background:var(--surface-highest);border-radius:999px}
+    .badge-optional{display:inline-block;padding:3px 8px;margin-left:6px;background:var(--secondary-container);border-radius:999px;color:var(--text-soft);font:600 .65rem var(--mono);vertical-align:middle}
+    .privacy-back{display:inline-flex;margin-bottom:30px;color:var(--muted);font-weight:700;text-decoration:none}.privacy-back:hover{color:var(--primary)}
+    @media(max-width:760px){.privacy-main{padding-top:82px}.privacy-body{padding:26px;border-radius:30px 30px 12px 30px}}
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="SkyFox home">
-      <img src="assets/SkyFox_Light.svg" alt="" width="42" height="42">
-      <span>SkyFox</span>
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="https://github.com/taynotfound/skyfox" rel="noreferrer">GitHub</a>
-    </nav>
-  </header>
-
-  <main>
-    <div class="prose">
-      <a class="back" href="/">← SkyFox</a>
-      <h1>Privacy Policy</h1>
-      <p class="subtitle">SkyFox · Maintained by Tay März · Last updated August 2026</p>
-
+  <header class="topbar"><div class="nav-shell"><a class="brand" href="/"><img src="/assets/SkyFox_Light.svg" alt="" width="44" height="44"><span>SkyFox</span></a><div class="nav-actions" style="margin-left:auto"><a class="button button-small button-tonal" href="/">← Home</a><a class="icon-button" href="https://github.com/taynotfound/skyfox" rel="noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.82c.85 0 1.71.12 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a></div></div></header>
+  <main class="wrap privacy-main">
+    <a class="privacy-back" href="/">← SkyFox</a>
+    <p class="eyebrow">Privacy</p>
+    <h1>Privacy<br><span>Policy.</span></h1>
+    <p class="privacy-subtitle">SkyFox · Maintained by Tay März · Last updated August 2026</p>
+    <div class="privacy-body">
       <p>SkyFox is a free and open-source Android flight tracker. It is based on the airplanes.live Android app by d4rken, used under the GPL-3.0 license. SkyFox is an independent project and is <strong>not</strong> affiliated with or endorsed by airplanes.live.</p>
-
       <hr>
-
       <h2>What SkyFox collects</h2>
       <p>SkyFox does not collect, share, or sell personal information. No user account is required or created. SkyFox does not operate a user database and contains no advertising or behavioural tracking.</p>
       <p>Normal app usage involves network requests to external services (described below). Those services will naturally receive your IP address as part of standard HTTP communication.</p>
-
       <hr>
-
       <h2>External services</h2>
-
-      <h3>airplanes.live</h3>
-      <p>Aircraft position and flight data is fetched from the <a href="https://airplanes.live" rel="noreferrer">airplanes.live</a> API. Your device sends requests to their servers to retrieve nearby aircraft data. Their privacy policy: <a href="https://airplanes.live/privacy/" rel="noreferrer">airplanes.live/privacy</a></p>
-
-      <h3>Planespotters.net</h3>
-      <p>Aircraft photographs are loaded from <a href="https://www.planespotters.net" rel="noreferrer">Planespotters.net</a> when available. Their privacy policy: <a href="https://www.planespotters.net/legal/privacypolicy" rel="noreferrer">planespotters.net/legal/privacypolicy</a></p>
-
-      <h3>GitHub</h3>
-      <p>Update checks and release information are fetched from the GitHub API (<code>api.github.com</code>). No personal data is sent beyond a standard HTTP request.</p>
-
+      <h3>airplanes.live</h3><p>Aircraft position and flight data is fetched from the <a href="https://airplanes.live" rel="noreferrer">airplanes.live</a> API. Your device sends requests to their servers to retrieve nearby aircraft data. Their privacy policy: <a href="https://airplanes.live/privacy/" rel="noreferrer">airplanes.live/privacy</a></p>
+      <h3>Planespotters.net</h3><p>Aircraft photographs are loaded from <a href="https://www.planespotters.net" rel="noreferrer">Planespotters.net</a> when available. Their privacy policy: <a href="https://www.planespotters.net/legal/privacypolicy" rel="noreferrer">planespotters.net/legal/privacypolicy</a></p>
+      <h3>GitHub</h3><p>Update checks and release information are fetched from the GitHub API (<code>api.github.com</code>). No personal data is sent beyond a standard HTTP request.</p>
       <hr>
-
       <h2>Android permissions</h2>
-
-      <h3>INTERNET</h3>
-      <p>Required to fetch aircraft data, aircraft photos, and release information. Without internet access, the app cannot retrieve live aircraft data.</p>
-
-      <h3>ACCESS_COARSE_LOCATION <span class="badge-optional">optional</span></h3>
-      <p>Provides a rough location estimate (2–4 km accuracy) to show nearby aircraft and center the map on your position. You can decline this permission and pan the map manually; distance-based features will be unavailable.</p>
-
-      <h3>ACCESS_FINE_LOCATION <span class="badge-optional">optional</span></h3>
-      <p>Provides higher-accuracy GPS-level location for the same purposes as coarse location. Optional — the app functions without it.</p>
-
-      <h3>CAMERA <span class="badge-optional">optional</span></h3>
-      <p>Used by the augmented-reality (AR) view to overlay aircraft on the camera feed. Only requested when you open the AR view. The app functions fully without it.</p>
-
-      <h3>POST_NOTIFICATIONS <span class="badge-optional">optional</span></h3>
-      <p>Used to deliver aircraft alerts — watched aircraft appearing nearby, emergency squawk alerts, feeder offline notifications. Declining this permission disables alert notifications.</p>
-
+      <h3>INTERNET</h3><p>Required to fetch aircraft data, aircraft photos, and release information. Without internet access, the app cannot retrieve live aircraft data.</p>
+      <h3>ACCESS_COARSE_LOCATION <span class="badge-optional">optional</span></h3><p>Provides a rough location estimate (2–4 km accuracy) to show nearby aircraft and center the map on your position. You can decline this permission and pan the map manually; distance-based features will be unavailable.</p>
+      <h3>ACCESS_FINE_LOCATION <span class="badge-optional">optional</span></h3><p>Provides higher-accuracy GPS-level location for the same purposes as coarse location. Optional — the app functions without it.</p>
+      <h3>CAMERA <span class="badge-optional">optional</span></h3><p>Used by the augmented-reality (AR) view to overlay aircraft on the camera feed. Only requested when you open the AR view. The app functions fully without it.</p>
+      <h3>POST_NOTIFICATIONS <span class="badge-optional">optional</span></h3><p>Used to deliver aircraft alerts — watched aircraft appearing nearby, emergency squawk alerts, feeder offline notifications. Declining this permission disables alert notifications.</p>
       <hr>
-
-      <h2>Local data</h2>
-      <p>All app data — watchlists, alerts, settings, cached aircraft data — is stored locally on your device. SkyFox does not upload this data to any server. You can export or delete local data at any time via the app settings.</p>
-
+      <h2>Local data</h2><p>All app data — watchlists, alerts, settings, cached aircraft data — is stored locally on your device. SkyFox does not upload this data to any server. You can export or delete local data at any time via the app settings.</p>
       <hr>
-
-      <h2>Debug log</h2>
-      <p>SkyFox includes an optional debug log for troubleshooting. It is manually triggered through app settings and records verbose app activity. The log stays on your device until you choose to share it.</p>
-      <p><strong>The log may contain sensitive information</strong>, including file paths, network request details, and details about installed applications. Only share debug logs with trusted parties when reporting a bug.</p>
-
+      <h2>Debug log</h2><p>SkyFox includes an optional debug log for troubleshooting. It is manually triggered through app settings and records verbose app activity. The log stays on your device until you choose to share it.</p><p><strong>The log may contain sensitive information</strong>, including file paths, network request details, and details about installed applications. Only share debug logs with trusted parties when reporting a bug.</p>
       <hr>
-
-      <h2>Analytics and advertising</h2>
-      <p>SkyFox contains no analytics SDK, no advertising SDK, and no behavioural tracking.</p>
-
+      <h2>Analytics and advertising</h2><p>SkyFox contains no analytics SDK, no advertising SDK, and no behavioural tracking.</p>
       <hr>
-
-      <h2>Contact</h2>
-      <p>For privacy-related questions, open an issue at <a href="https://github.com/taynotfound/skyfox/issues" rel="noreferrer">github.com/taynotfound/skyfox/issues</a>.</p>
-
-      <p style="margin-top:3rem;font-size:.8rem;color:var(--md-on-surface-v)"><a href="https://github.com/taynotfound/skyfox/blob/main/PRIVACY_POLICY.md" rel="noreferrer">View this policy on GitHub</a></p>
+      <h2>Contact</h2><p>For privacy-related questions, open an issue at <a href="https://github.com/taynotfound/skyfox/issues" rel="noreferrer">github.com/taynotfound/skyfox/issues</a>.</p><p style="margin-top:3rem;font-size:.8rem"><a href="https://github.com/taynotfound/skyfox/blob/main/PRIVACY_POLICY.md" rel="noreferrer">View this policy on GitHub</a></p>
     </div>
   </main>
-
-  <footer class="site-footer wrap">
-    <a class="brand" href="/"><img src="assets/SkyFox_Light.svg" alt="" width="34" height="34"><span>SkyFox</span></a>
-    <p>Keep your eyes on the sky.</p>
-    <nav aria-label="Footer navigation">
-      <a href="/">Home</a>
-      <a href="https://github.com/taynotfound/skyfox" rel="noreferrer">GitHub</a>
-      <a href="https://github.com/taynotfound/skyfox/releases" rel="noreferrer">Releases</a>
-      <a href="privacy">Privacy</a>
-      <a href="https://github.com/taynotfound/skyfox/blob/main/LICENSE" rel="noreferrer">GPL-3.0</a>
-    </nav>
-    <p class="footer-attr">Aircraft data: <a href="https://airplanes.live" rel="noreferrer">airplanes.live</a> · Based on <a href="https://github.com/d4rken-org/airplanes-live-app" rel="noreferrer">airplanes.live app by d4rken</a> (GPL)</p>
-  </footer>
 </body>
 </html>

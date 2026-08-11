@@ -3,331 +3,281 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>SkyFox – Free Open-Source Flight Tracker for Android</title>
-  <meta name="description" content="Track nearby aircraft live on Android. Search by callsign, registration, HEX or squawk, create watchlists and receive alerts. Free, open source, no account required.">
+  <title>SkyFox — Open-source flight tracking for Android</title>
+  <meta name="description" content="Track nearby aircraft live, search by callsign, registration, HEX or squawk, build watchlists and get alerts. SkyFox is free, open source and requires no account.">
   <meta name="theme-color" content="#0b1220">
-
+  <meta name="color-scheme" content="dark">
   <link rel="canonical" href="https://skyfox.taymaerz.de/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://skyfox.taymaerz.de/">
-  <meta property="og:title" content="SkyFox – Free Open-Source Flight Tracker for Android">
-  <meta property="og:description" content="Track nearby aircraft live on Android. Search by callsign, registration, HEX or squawk, create watchlists and receive alerts. Free, open source, no account required.">
-  <meta property="og:image" content="https://skyfox.taymaerz.de/assets/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="SkyFox">
-
-  <!-- Twitter/X card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SkyFox – Free Open-Source Flight Tracker for Android">
-  <meta name="twitter:description" content="Track nearby aircraft live on Android. Free, open source, no account required.">
-  <meta name="twitter:image" content="https://skyfox.taymaerz.de/assets/og-image.jpg">
-
-  <!-- Icons -->
-  <link rel="icon" type="image/svg+xml" href="assets/SkyFox_Monochrome.svg">
-  <link rel="apple-touch-icon" href="assets/SkyFox_Dark.svg">
-
-  <!-- hreflang -->
   <link rel="alternate" hreflang="en" href="https://skyfox.taymaerz.de/">
   <link rel="alternate" hreflang="de" href="https://skyfox.taymaerz.de/de/">
   <link rel="alternate" hreflang="fr" href="https://skyfox.taymaerz.de/fr/">
   <link rel="alternate" hreflang="es" href="https://skyfox.taymaerz.de/es/">
   <link rel="alternate" hreflang="it" href="https://skyfox.taymaerz.de/it/">
   <link rel="alternate" hreflang="x-default" href="https://skyfox.taymaerz.de/">
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://skyfox.taymaerz.de/#website",
-        "url": "https://skyfox.taymaerz.de/",
-        "name": "SkyFox",
-        "description": "Free open-source flight tracker for Android"
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://skyfox.taymaerz.de/#app",
-        "name": "SkyFox",
-        "operatingSystem": "Android",
-        "applicationCategory": "UtilitiesApplication",
-        "description": "Free, open-source ADS-B flight tracker for Android. Track nearby aircraft, search by callsign, registration, HEX or squawk, build watchlists and receive alerts. No account required.",
-        "url": "https://skyfox.taymaerz.de/",
-        "downloadUrl": "https://github.com/taynotfound/skyfox/releases/latest/download/skyfox-release.apk",
-        "softwareVersion": "0.10.0",
-        "license": "https://www.gnu.org/licenses/gpl-3.0.en.html",
-        "author": {
-          "@type": "Person",
-          "name": "Tay März",
-          "url": "https://taymaerz.de"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "EUR"
-        },
-        "logo": "https://skyfox.taymaerz.de/assets/SkyFox_Dark.svg"
-      }
-    ]
-  }
-  </script>
-
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SkyFox — Open-source flight tracking for Android">
+  <meta property="og:description" content="Live aircraft. Deep search. Watchlists and alerts. No account required.">
+  <meta property="og:image" content="https://skyfox.taymaerz.de/assets/og-image.jpg">
+  <meta property="og:url" content="https://skyfox.taymaerz.de/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SkyFox — Open-source flight tracking for Android">
+  <meta name="twitter:description" content="Live aircraft. Deep search. Watchlists and alerts. No account required.">
+  <meta name="twitter:image" content="https://skyfox.taymaerz.de/assets/og-image.jpg">
+  <link rel="icon" type="image/svg+xml" href="/assets/SkyFox_Monochrome.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=logo-palette-1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,75..125,300..900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"SkyFox",
+    "applicationCategory":"UtilitiesApplication",
+    "operatingSystem":"Android",
+    "description":"Free, open-source ADS-B flight tracker for Android with live aircraft, search, watchlists and alerts.",
+    "url":"https://skyfox.taymaerz.de/",
+    "downloadUrl":"https://github.com/taynotfound/skyfox/releases/latest/download/skyfox-release.apk",
+    "license":"https://www.gnu.org/licenses/gpl-3.0.en.html",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}
+  }
+  </script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="SkyFox home">
-      <img src="assets/SkyFox_Light.svg" alt="" width="42" height="42">
-      <span>SkyFox</span>
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="#features" data-i18n="navFeatures">Features</a>
-      <a href="#screens" data-i18n="navScreens">Screenshots</a>
-      <a href="#download" data-i18n="navDownload">Download</a>
-      <a href="#faq" data-i18n="navFaq">FAQ</a>
-      <a href="https://github.com/taynotfound/skyfox" rel="noreferrer" data-i18n="navSource">GitHub</a>
-      <a class="nav-cta" href="#download" data-i18n="navCta">Get SkyFox</a>
-    </nav>
-    <label class="locale-picker"><span class="sr-only">Language</span><select id="locale" aria-label="Language"><option value="en">English</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="es">Español</option><option value="it">Italiano</option></select></label>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="SkyFox home">
+        <img src="/assets/SkyFox_Light.svg" alt="" width="44" height="44">
+        <span>SkyFox</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#features" data-i18n="navFeatures">Features</a>
+        <a href="#screens" data-i18n="navScreens">Screens</a>
+        <a href="#download" data-i18n="navDownload">Download</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <label class="language-control" aria-label="Language">
+          <span aria-hidden="true" class="control-icon">文</span>
+          <select id="locale" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+            <option value="fr">FR</option>
+            <option value="es">ES</option>
+            <option value="it">IT</option>
+          </select>
+        </label>
+        <a class="icon-button" href="https://github.com/taynotfound/skyfox" target="_blank" rel="noreferrer" aria-label="Open SkyFox on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.82c.85 0 1.71.12 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+        <a class="button button-small button-primary" href="#download" data-i18n="navCta">Get SkyFox</a>
+      </div>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero wrap" style="position:relative;overflow:hidden;">
-      <div class="hero-copy">
-        <p class="eyebrow"><span data-i18n="heroEyebrow">Free &amp; open-source flight tracking for Android</span></p>
-        <h1 data-i18n="heroTitle">Live flight tracking, built for plane spotters.</h1>
-        <p class="lede" data-i18n="heroLede">Track nearby aircraft, search by callsign, registration or HEX, build watchlists and get alerts. Free, open source and no account required.</p>
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <div class="hero-copy reveal">
+        <div class="status-chip"><span data-i18n="heroEyebrow">Free · open source · Android</span></div>
+        <h1 data-i18n="heroTitle">Look up.<br><span>Know what’s flying.</span></h1>
+        <p class="hero-lede" data-i18n="heroLede">A fast flight tracker made for plane spotters. See nearby aircraft, search the details that matter, save what interests you, and get alerted when it appears.</p>
         <div class="hero-actions">
-          <a class="button button-primary" data-i18n="download" href="#download">Download SkyFox for Android</a>
-          <a class="button button-secondary" href="https://github.com/taynotfound/skyfox" rel="noreferrer" data-i18n="navSource">View Source</a>
+          <a class="button button-primary button-large" href="#download">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm5 17.25a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM8 5v9h8V5H8Z"/></svg>
+            <span data-i18n="download">Download for Android</span>
+          </a>
+          <a class="button button-tonal button-large" href="https://github.com/taynotfound/skyfox" target="_blank" rel="noreferrer">
+            <span data-i18n="source">View source</span>
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
-        <ul class="trust-row" aria-label="Key facts">
-          <li data-i18n="trustFree">Free</li>
-          <li data-i18n="trustOss">Open source</li>
-          <li data-i18n="trustNoAccount">No account</li>
-          <li data-i18n="trustPrivate">Privacy-friendly</li>
-        </ul>
+        <div class="trust-row" aria-label="Key facts">
+          <span data-i18n="trustFree">100% free</span>
+          <span data-i18n="trustNoAccount">No account</span>
+          <span data-i18n="trustPrivate">Privacy-friendly</span>
+        </div>
       </div>
-      <div class="hero-art" aria-label="SkyFox app preview">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <img class="hero-logo" src="assets/SkyFox_Light.svg" alt="SkyFox logo" width="220" height="220">
-        <div class="flight-label label-one"><span class="label-dot orange"></span> DLH456 <small>A380</small></div>
-        <div class="flight-label label-two"><span class="label-dot blue"></span> UAL789 <small>B787</small></div>
-        <div class="flight-label label-three"><span class="label-dot yellow"></span> RYR1234 <small>B738</small></div>
+
+      <div class="hero-visual reveal" aria-label="SkyFox live map preview">
+        <div class="hero-blob" aria-hidden="true"></div>
+        <div class="phone phone-hero">
+          <img src="/assets/screenshots/en/map.png" alt="SkyFox live aircraft map" fetchpriority="high">
+        </div>
+
       </div>
     </section>
 
-    <section class="signal-band" aria-label="SkyFox product summary">
-      <div class="wrap signal-grid">
-        <p><strong data-i18n="signalOne">Map first.</strong> <span data-i18n="signalOneDesc">What's flying near you, right now.</span></p>
-        <p><strong data-i18n="signalTwo">Search deep.</strong> <span data-i18n="signalTwoDesc">HEX, callsign, registration, airframe, SQUAWK.</span></p>
-        <p><strong data-i18n="signalThree">Stay private.</strong> <span data-i18n="signalThreeDesc">No account needed to start spotting.</span></p>
+    <section class="quick-band wrap reveal" aria-label="SkyFox at a glance">
+      <div class="quick-item">
+        <span class="quick-icon">⌖</span>
+        <div><strong data-i18n="quick1Title">Map first</strong><span data-i18n="quick1Text">See what’s overhead right now.</span></div>
+      </div>
+      <div class="quick-item">
+        <span class="quick-icon">⌕</span>
+        <div><strong data-i18n="quick2Title">Search deep</strong><span data-i18n="quick2Text">Callsign, HEX, registration, type, squawk.</span></div>
+      </div>
+      <div class="quick-item">
+        <span class="quick-icon">◉</span>
+        <div><strong data-i18n="quick3Title">Stay private</strong><span data-i18n="quick3Text">No account needed. Just start spotting.</span></div>
       </div>
     </section>
 
-    <section id="features" class="section wrap">
-      <div class="section-heading">
-        <p class="eyebrow" data-i18n="featuresEyebrow">Built for looking up</p>
-        <h2 data-i18n="featuresH2">The useful parts of flight tracking.</h2>
+    <section class="section wrap" id="features">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="featuresEyebrow">Made for the moment you look up</p>
+        <h2 data-i18n="featuresH2">The useful stuff.<br><span>Nothing in the way.</span></h2>
       </div>
-      <div class="feature-grid">
-        <article class="feature feature-wide">
-          <p class="feature-index" data-i18n="feat1Label">01 / LIVE MAP</p>
-          <h3 data-i18n="feat1H3">See what's overhead.</h3>
-          <p data-i18n="feat1P">Live aircraft on a clear interactive map. Selectable layers, location controls, filters and a focused detail view per aircraft.</p>
-          <span class="feature-mark" aria-hidden="true">◌</span>
+
+      <div class="bento-grid">
+        <article class="feature-card feature-map reveal">
+          <div class="feature-icon feature-icon-primary">⌖</div>
+          <div class="feature-copy">
+            <p class="kicker" data-i18n="feat1Label">LIVE MAP</p>
+            <h3 data-i18n="feat1H3">See what’s overhead.</h3>
+            <p data-i18n="feat1P">Nearby aircraft on a focused interactive map with filters, selectable layers, location controls and quick details.</p>
+          </div>
+          <div class="map-decoration" aria-hidden="true">
+            <span style="--x:15%;--y:22%;--r:-22deg">✈</span><span style="--x:47%;--y:18%;--r:16deg">✈</span><span style="--x:75%;--y:42%;--r:72deg">✈</span><span style="--x:29%;--y:68%;--r:-44deg">✈</span><span style="--x:69%;--y:79%;--r:118deg">✈</span>
+          </div>
         </article>
-        <article class="feature">
-          <p class="feature-index" data-i18n="feat2Label">02 / SEARCH</p>
-          <h3 data-i18n="feat2H3">Find the aircraft you just saw.</h3>
-          <p data-i18n="feat2P">Search by HEX, callsign, registration, airframe type or SQUAWK and jump straight to its details.</p>
+
+        <article class="feature-card feature-search reveal">
+          <div class="feature-icon">⌕</div>
+          <p class="kicker" data-i18n="feat2Label">SEARCH</p>
+          <h3 data-i18n="feat2H3">Find the one you just saw.</h3>
+          <p data-i18n="feat2P">Search by callsign, registration, HEX, aircraft type or squawk.</p>
+          <div class="fake-search" aria-hidden="true"><span>⌕</span><span>DLH456</span><span class="fake-filter">Callsign</span></div>
         </article>
-        <article class="feature">
-          <p class="feature-index" data-i18n="feat3Label">03 / WATCHLISTS</p>
-          <h3 data-i18n="feat3H3">Keep tabs on the interesting ones.</h3>
-          <p data-i18n="feat3P">Watch specific aircraft, ICAO addresses, callsigns, registrations or SQUAWKs and receive alerts when they appear.</p>
+
+        <article class="feature-card feature-watch reveal">
+          <div class="feature-icon feature-icon-orange">◎</div>
+          <p class="kicker" data-i18n="feat3Label">WATCHLISTS + ALERTS</p>
+          <h3 data-i18n="feat3H3">Save it. We’ll watch for it.</h3>
+          <p data-i18n="feat3P">Watch aircraft, registrations, callsigns or squawks and get alerted when something interesting appears.</p>
+          <div class="alert-pill" aria-hidden="true"><span>✈</span><div><strong>D-AIMA nearby</strong><small>42 km away · ADS-B</small></div></div>
         </article>
-        <article class="feature feature-wide feature-accent">
-          <p class="feature-index" data-i18n="feat4Label">04 / AIRCRAFT DETAILS</p>
-          <h3 data-i18n="feat4H3">Know exactly what you're looking at.</h3>
-          <p data-i18n="feat4P">Registration, operator, route, altitude, speed, heading, vertical rate, registry details and emergency squawk status — all in one place.</p>
-          <a class="feature-link" href="https://github.com/taynotfound/skyfox" rel="noreferrer" data-i18n="feat4Link">View source →</a>
+
+        <article class="feature-card feature-details reveal">
+          <div class="feature-copy">
+            <p class="kicker" data-i18n="feat4Label">AIRCRAFT DETAILS</p>
+            <h3 data-i18n="feat4H3">Know exactly what you’re looking at.</h3>
+            <p data-i18n="feat4P">Operator, route, altitude, speed, heading, vertical rate, registry details and emergency squawk status in one place.</p>
+          </div>
+          <div class="route-card" aria-hidden="true">
+            <div><small>Lufthansa · A380-841</small><strong>FRA <span>✈</span> LHR</strong></div>
+            <div class="route-stats"><span><small>CALLSIGN</small>DLH456</span><span><small>ALTITUDE</small>38,000 ft</span><span><small>SPEED</small>280 kts</span></div>
+          </div>
         </article>
-        <article class="feature">
-          <p class="feature-index" data-i18n="feat5Label">05 / ALERTS</p>
-          <h3 data-i18n="feat5H3">Get alerted when something interesting appears.</h3>
-          <p data-i18n="feat5P">Set alerts for aircraft nearby, specific registrations, callsigns, SQUAWK codes or locations — including emergency squawks 7500, 7600, 7700.</p>
-        </article>
-        <article class="feature">
-          <p class="feature-index" data-i18n="feat6Label">06 / FEEDERS</p>
-          <h3 data-i18n="feat6H3">Running an airplanes.live feeder?</h3>
-          <p data-i18n="feat6P">Monitor your feeder status and receive offline notifications if it goes down, straight from the app.</p>
+
+        <article class="feature-card feature-feeder reveal">
+          <div class="feature-icon">⌁</div>
+          <p class="kicker" data-i18n="feat5Label">FEEDER STATUS</p>
+          <h3 data-i18n="feat5H3">Feeding airplanes.live?</h3>
+          <p data-i18n="feat5P">Keep an eye on your feeder and get notified if it goes offline.</p>
+          <div class="status-line" aria-hidden="true"><strong>Feeder online</strong><small>Last seen now</small></div>
         </article>
       </div>
     </section>
 
-
-    <section class="spotter-section wrap" aria-label="For plane spotters">
-      <div class="section-heading">
-        <p class="eyebrow">Built for spotting</p>
-        <h2>Built for the moment you look up.</h2>
-      </div>
-      <div class="spotter-grid">
-        <div class="spotter-item">
-          <p class="spotter-q">Saw something interesting?</p>
-          <p class="spotter-a">Search its callsign, registration, HEX, aircraft type or SQUAWK — and jump straight to its details.</p>
-        </div>
-        <div class="spotter-item">
-          <p class="spotter-q">Waiting for a specific aircraft?</p>
-          <p class="spotter-a">Add it to a watchlist and receive an alert when it appears nearby.</p>
-        </div>
-        <div class="spotter-item">
-          <p class="spotter-q">Wondering what's approaching?</p>
-          <p class="spotter-a">See nearby aircraft immediately on the live map. No setup, no account.</p>
-        </div>
-        <div class="spotter-item">
-          <p class="spotter-q">Something squawking 7700?</p>
-          <p class="spotter-a">SkyFox alerts you to emergency squawks in the area automatically.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="screens" class="screens-section">
+    <section class="screens-section" id="screens">
       <div class="wrap">
-        <div class="section-heading screens-heading">
+        <div class="screens-head reveal">
           <div>
-            <p class="eyebrow" data-i18n="screensEyebrow">Real app. Real aircraft.</p>
-            <h2 data-i18n="galleryTitle">Less ceremony.<br>More aircraft.</h2>
-            <p data-i18n="galleryIntro">From spotting an aircraft overhead to finding it again later, SkyFox keeps the useful stuff close.</p>
+            <p class="eyebrow" data-i18n="screensEyebrow">Real app screens</p>
+            <h2 data-i18n="galleryTitle">Less ceremony.<br><span>More aircraft.</span></h2>
           </div>
-          <div class="gallery-controls" role="group" aria-label="Screenshot language"><button class="locale-button active" data-gallery-locale="en">English</button><button class="locale-button" data-gallery-locale="de">Deutsch</button><button class="locale-button" data-gallery-locale="fr">Français</button><button class="locale-button" data-gallery-locale="es">Español</button><button class="locale-button" data-gallery-locale="it">Italiano</button></div>
+          <p data-i18n="galleryIntro">The website uses the same Fox palette and the same Material 3 Expressive thinking as the app: tonal surfaces, bold shapes, clear hierarchy and almost no decorative borders.</p>
         </div>
-        <div class="screenshots" id="gallery"></div>
+
+        <div class="screen-flow">
+          <article class="screen-step screen-step-tall reveal">
+            <div class="screen-meta"><span>01</span><div><strong data-i18n="screen1Title">Spot it</strong><small data-i18n="screen1Text">See what’s overhead.</small></div></div>
+            <div class="phone"><img src="/assets/screenshots/en/map.png" alt="SkyFox map screen" loading="lazy"></div>
+          </article>
+          <article class="screen-step screen-step-tall reveal">
+            <div class="screen-meta"><span>02</span><div><strong data-i18n="screen2Title">Find it</strong><small data-i18n="screen2Text">Search the details you know.</small></div></div>
+            <div class="phone"><img src="/assets/screenshots/en/search.png" alt="SkyFox search screen" loading="lazy"></div>
+          </article>
+          <article class="screen-step reveal">
+            <div class="screen-meta"><span>03</span><div><strong data-i18n="screen3Title">Know it</strong><small data-i18n="screen3Text">Get the useful details fast.</small></div></div>
+            <div class="screen-card-wide"><img src="/assets/screenshots/en/plane-details.png" alt="SkyFox aircraft details screen" loading="lazy"></div>
+          </article>
+          <article class="screen-step screen-step-tall reveal">
+            <div class="screen-meta"><span>04</span><div><strong data-i18n="screen4Title">Save it</strong><small data-i18n="screen4Text">Keep the interesting ones close.</small></div></div>
+            <div class="phone"><img src="/assets/screenshots/en/watch.png" alt="SkyFox watchlist screen" loading="lazy"></div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="download" class="download-section wrap">
-      <div class="download-card">
-        <img src="assets/SkyFox_Dark.svg" alt="SkyFox logo" width="116" height="116">
-        <div>
-          <p class="eyebrow" data-i18n="downloadEyebrow">Free &amp; open source</p>
-          <h2 data-i18n="downloadH2">Download SkyFox for Android.</h2>
+    <section class="section wrap spotter-section">
+      <div class="spotter-shell reveal">
+        <div class="spotter-copy">
+          <p class="eyebrow" data-i18n="spotterEyebrow">Built for spotting</p>
+          <h2 data-i18n="spotterH2">From “what was that?”<br><span>to “there it is.”</span></h2>
+          <p data-i18n="spotterP">SkyFox is designed around the questions spotters actually have, not around dashboards you have to configure first.</p>
+        </div>
+        <div class="scenario-list">
+          <div class="scenario"><span>01</span><div><strong data-i18n="scenario1Q">Something unusual overhead?</strong><p data-i18n="scenario1A">Open the map and identify it immediately.</p></div></div>
+          <div class="scenario"><span>02</span><div><strong data-i18n="scenario2Q">Waiting for a specific aircraft?</strong><p data-i18n="scenario2A">Watch it and get an alert when it appears.</p></div></div>
+          <div class="scenario"><span>03</span><div><strong data-i18n="scenario3Q">Only caught part of the callsign?</strong><p data-i18n="scenario3A">Search the information you have and narrow it down.</p></div></div>
+        </div>
+      </div>
+    </section>
 
-          <div class="download-tiers">
-            <div class="download-tier download-tier-stable">
-              <p class="tier-label" data-i18n="dlTierStableLabel">Latest Release</p>
-              <div class="release-badge" id="release-badge">
-                <span class="release-tag" id="release-tag">…</span>
-                <a class="button button-primary" id="release-dl" href="https://github.com/taynotfound/skyfox/releases/latest/download/skyfox-release.apk" data-i18n="downloadBtn">Download APK</a>
-                <a class="release-notes-link" id="release-notes" href="https://github.com/taynotfound/skyfox/releases/latest" target="_blank" rel="noreferrer" data-i18n="downloadChangelog">What's new</a>
-              </div>
-              <p class="tier-note" data-i18n="dlTierStableNote">Requires Android 8.0 (API 26) or newer.</p>
-            </div>
-            <div class="download-tier download-tier-nightly">
-              <p class="tier-label" data-i18n="dlTierNightlyLabel">Nightly / Development</p>
-              <a class="button button-secondary" href="https://github.com/taynotfound/skyfox/releases/tag/nightly" rel="noreferrer" data-i18n="dlTierNightlyBtn">Get nightly build</a>
-              <p class="tier-note" data-i18n="dlTierNightlyNote">Built from the latest commit. May be unstable. For testers and developers.</p>
-            </div>
+    <section class="download-section wrap" id="download">
+      <div class="download-shell reveal">
+        <div class="download-logo-wrap"><img src="/assets/SkyFox_Light.svg" alt="SkyFox" width="160" height="160"></div>
+        <div class="download-copy">
+          <p class="eyebrow" data-i18n="downloadEyebrow">Free & open source</p>
+          <h2 data-i18n="downloadH2">Put the sky<br><span>in your pocket.</span></h2>
+          <p class="download-intro" data-i18n="downloadIntro">No Play Store account, subscription or sign-up required. Download the APK directly from GitHub.</p>
+          <div class="release-row">
+            <div class="release-info"><small data-i18n="latestRelease">LATEST RELEASE</small><strong id="release-tag">Latest stable</strong><span data-i18n="androidRequirement">Android 8.0+</span></div>
+            <a class="button button-primary button-large" id="release-dl" href="https://github.com/taynotfound/skyfox/releases/latest/download/skyfox-release.apk"><span data-i18n="downloadBtn">Download APK</span><span aria-hidden="true">↓</span></a>
           </div>
-
-          <details class="install-guide">
-            <summary>How to install</summary>
-            <ol class="install-steps">
-              <li>Download the SkyFox APK above.</li>
-              <li>Open the downloaded file on your Android device.</li>
-              <li>Android may show a security prompt — this is normal for apps distributed outside app stores. Tap <strong>Install</strong> to continue.</li>
-              <li>If asked, allow your browser or file manager to install apps from this source.</li>
-              <li>Open SkyFox.</li>
-            </ol>
-            <p class="install-note">SkyFox is open source. You can <a href="https://github.com/taynotfound/skyfox" rel="noreferrer">verify the source code</a> and <a href="https://github.com/taynotfound/skyfox/actions" rel="noreferrer">build it yourself</a>.</p>
-          </details>
-
-
-          <p class="download-meta" data-i18n="downloadMeta">Built in GitHub Actions from the <a href="https://github.com/taynotfound/skyfox" rel="noreferrer">public source</a>. FOSS flavor, no proprietary dependencies.</p>
+          <div class="download-links">
+            <a id="release-notes" href="https://github.com/taynotfound/skyfox/releases/latest" target="_blank" rel="noreferrer" data-i18n="changelog">Release notes ↗</a>
+            <a href="https://github.com/taynotfound/skyfox/releases/tag/nightly" target="_blank" rel="noreferrer" data-i18n="nightly">Nightly builds ↗</a>
+            <a href="https://github.com/taynotfound/skyfox" target="_blank" rel="noreferrer" data-i18n="buildYourself">Build it yourself ↗</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="ai-notice wrap" aria-labelledby="ai-notice-title">
-      <p class="eyebrow">Project note</p>
-      <h2 id="ai-notice-title">How AI was used</h2>
-      <p>Claude and ChatGPT were used as tools during development for brainstorming, UI design exploration, documenting decisions, writing and improving documentation, repetitive coding tasks, and debugging issues where a second perspective helped find a fix. They did not replace testing, source review, or the maintainer's responsibility for the final code and claims.</p>
+    <section class="section wrap values-section">
+      <div class="value-card reveal"><span class="value-symbol">$0</span><strong data-i18n="value1Title">Actually free</strong><p data-i18n="value1Text">No subscriptions, ads or in-app purchases.</p></div>
+      <div class="value-card reveal"><span class="value-symbol">⌁</span><strong data-i18n="value2Title">Open source</strong><p data-i18n="value2Text">The code is public. Inspect it, build it, improve it.</p></div>
+      <div class="value-card reveal"><span class="value-symbol">⊘</span><strong data-i18n="value3Title">No account</strong><p data-i18n="value3Text">Flight tracking should not begin with a registration form.</p></div>
     </section>
 
-    <section class="trust-section wrap">
-      <div>
-        <p class="eyebrow" data-i18n="trustEyebrow">Open, independent, honest</p>
-        <h2 data-i18n="trustH2">No surprises.</h2>
-      </div>
-      <div class="trust-copy">
-        <p data-i18n="trustP1">SkyFox is an independent project based on the airplanes.live Android app by d4rken (GPL). Aircraft data is provided by airplanes.live. SkyFox is not affiliated with or endorsed by airplanes.live.</p>
-        <p><span data-i18n="trustP2">Maintained by </span><a href="https://taymaerz.de" rel="noreferrer">Tay März</a>. <a href="/privacy" data-i18n="trustPrivacyLink">Privacy policy</a> · <a href="https://github.com/taynotfound/skyfox/blob/main/LICENSE" rel="noreferrer">GPL-3.0</a></p>
+    <section class="section wrap faq-section" id="faq">
+      <div class="section-heading compact reveal"><p class="eyebrow">FAQ</p><h2 data-i18n="faqH2">Good to know.</h2></div>
+      <div class="faq-list">
+        <details class="faq-item reveal"><summary data-i18n="faq1Q">What is SkyFox?</summary><p data-i18n="faq1A">SkyFox is a free, open-source Android app for live aircraft tracking using ADS-B data from airplanes.live.</p></details>
+        <details class="faq-item reveal"><summary data-i18n="faq2Q">Do I need an account?</summary><p data-i18n="faq2A">No. You can install SkyFox and start using it without creating an account.</p></details>
+        <details class="faq-item reveal"><summary data-i18n="faq3Q">Where does the aircraft data come from?</summary><p data-i18n="faq3A">Aircraft data is provided by airplanes.live, a community-driven ADS-B network. SkyFox is independent and is not affiliated with or endorsed by airplanes.live.</p></details>
+        <details class="faq-item reveal"><summary data-i18n="faq4Q">Why does SkyFox need location permission?</summary><p data-i18n="faq4A">Location is used to show aircraft near you and center the map. You can decline permission and move the map manually instead.</p></details>
+        <details class="faq-item reveal"><summary data-i18n="faq5Q">Is SkyFox available on iOS?</summary><p data-i18n="faq5A">No. SkyFox is currently Android-only.</p></details>
       </div>
     </section>
 
-    <section id="faq" class="faq-section wrap">
-      <div class="section-heading">
-        <p class="eyebrow" data-i18n="faqEyebrow">FAQ</p>
-        <h2 data-i18n="faqH2">Common questions.</h2>
-      </div>
-      <dl class="faq-list">
-        <div class="faq-item">
-          <dt data-i18n="faq1Q">What is SkyFox?</dt>
-          <dd data-i18n="faq1A">SkyFox is a free, open-source Android app for tracking live aircraft. It uses ADS-B data from airplanes.live to show nearby flights on an interactive map, with search, watchlists and alerts.</dd>
-        </div>
-        <div class="faq-item">
-          <dt data-i18n="faq2Q">Is it free?</dt>
-          <dd data-i18n="faq2A">Yes. SkyFox is free to download and use with no in-app purchases or subscriptions.</dd>
-        </div>
-        <div class="faq-item">
-          <dt data-i18n="faq3Q">Do I need an account?</dt>
-          <dd data-i18n="faq3A">No. SkyFox works without any account or registration.</dd>
-        </div>
-        <div class="faq-item">
-          <dt data-i18n="faq4Q">Where does the aircraft data come from?</dt>
-          <dd data-i18n="faq4A">Aircraft data is provided by airplanes.live, a community-driven ADS-B network with feeders around the world. SkyFox is independent and not affiliated with airplanes.live.</dd>
-        </div>
-        <div class="faq-item">
-          <dt data-i18n="faq5Q">Is SkyFox affiliated with airplanes.live?</dt>
-          <dd data-i18n="faq5A">No. SkyFox is an independent open-source project. It uses airplanes.live as a data source but is not affiliated with, endorsed by, or operated by airplanes.live.</dd>
-        </div>
-        <div class="faq-item">
-          <dt data-i18n="faq6Q">Why does the app need location permission?</dt>
-          <dd data-i18n="faq6A">Location permission is used to show aircraft near your current position and to center the map on you. It is not required to use the app — you can decline it and pan the map manually.</dd>
-        </div>
-        <div class="faq-item">
-          <dt data-i18n="faq7Q">How do I install the APK?</dt>
-          <dd data-i18n="faq7A">Download the APK, open it on your Android device and follow the install prompt. You may need to enable installation from unknown sources in your device settings. This is normal for apps distributed outside of app stores.</dd>
-        </div>
-        <div class="faq-item">
-          <dt data-i18n="faq8Q">Is SkyFox available on iOS?</dt>
-          <dd data-i18n="faq8A">No. SkyFox is Android-only.</dd>
-        </div>
-      </dl>
+    <section class="project-note wrap reveal">
+      <div><p class="eyebrow" data-i18n="projectEyebrow">Independent project</p><strong data-i18n="projectTitle">Open about what SkyFox is.</strong></div>
+      <p data-i18n="projectText">SkyFox is based on the airplanes.live Android app by d4rken (GPL). Aircraft data is provided by airplanes.live. SkyFox is independent and not affiliated with or endorsed by airplanes.live. AI tools were used during development for brainstorming, UI exploration, documentation, repetitive coding and debugging; final decisions, testing and claims remain the maintainer’s responsibility.</p>
     </section>
   </main>
 
-  <footer class="site-footer wrap">
-    <a class="brand" href="#top"><img src="assets/SkyFox_Light.svg" alt="" width="34" height="34"><span>SkyFox</span></a>
-    <p data-i18n="footerTagline">Keep your eyes on the sky.</p>
-    <nav aria-label="Footer navigation">
-      <a href="https://github.com/taynotfound/skyfox" rel="noreferrer">GitHub</a>
-      <a href="https://github.com/taynotfound/skyfox/releases" rel="noreferrer" data-i18n="footerReleases">Releases</a>
-      <a href="/privacy" data-i18n="footerPrivacy">Privacy</a>
-      <a href="https://github.com/taynotfound/skyfox/issues" rel="noreferrer" data-i18n="footerIssues">Issues</a>
-      <a href="https://github.com/taynotfound/skyfox/blob/main/LICENSE" rel="noreferrer">GPL-3.0</a>
-    </nav>
-    <p class="footer-attr">Aircraft data: <a href="https://airplanes.live" rel="noreferrer">airplanes.live</a> · Based on <a href="https://github.com/d4rken-org/airplanes-live-app" rel="noreferrer">airplanes.live app by d4rken</a> (GPL)</p>
+  <footer class="footer wrap">
+    <div class="footer-brand"><a class="brand" href="#top"><img src="/assets/SkyFox_Light.svg" alt="" width="42" height="42"><span>SkyFox</span></a><p data-i18n="footerTagline">Keep your eyes on the sky.</p></div>
+    <nav aria-label="Footer navigation"><a href="https://github.com/taynotfound/skyfox" target="_blank" rel="noreferrer">GitHub</a><a href="https://github.com/taynotfound/skyfox/releases" target="_blank" rel="noreferrer" data-i18n="footerReleases">Releases</a><a href="/privacy/" data-i18n="footerPrivacy">Privacy</a><a href="https://github.com/taynotfound/skyfox/issues" target="_blank" rel="noreferrer" data-i18n="footerIssues">Issues</a><a href="https://github.com/taynotfound/skyfox/blob/main/LICENSE" target="_blank" rel="noreferrer">GPL-3.0</a></nav>
+    <p class="footer-fine">Aircraft data: <a href="https://airplanes.live" target="_blank" rel="noreferrer">airplanes.live</a> · Maintained by <a href="https://taymaerz.de" target="_blank" rel="noreferrer">Tay März</a></p>
   </footer>
-  <script src="script.js" defer></script>
+
+  <script src="/script.js" defer></script>
 </body>
 </html>
