@@ -536,3 +536,39 @@ h1 em { color: var(--md-primary); font-style: normal; }
   margin-top: .5rem;
 }
 .footer-attr a { color: var(--md-on-surface-var); text-decoration: underline; }
+
+/* ── Spotter section ───────────────────────────── */
+.spotter-section { padding: 4rem 0; border-top: 1px solid var(--md-outline-v); }
+.spotter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.spotter-item { display: flex; flex-direction: column; gap: .4rem; }
+.spotter-q { font-weight: 700; font-size: 1rem; margin: 0; color: var(--md-on-surface); }
+.spotter-a { margin: 0; color: var(--md-on-surface-v); font-size: .9rem; line-height: 1.6; }
+
+/* ── Install guide ─────────────────────────────── */
+.install-guide {
+  margin-top: 1.5rem;
+  border: 1px solid var(--md-outline-v);
+  border-radius: 8px;
+  padding: .75rem 1rem;
+  font-size: .88rem;
+}
+.install-guide summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--md-on-surface-v);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.install-guide summary::before { content: '▸'; font-size: .7rem; }
+.install-guide[open] summary::before { content: '▾'; }
+.install-steps { margin: 1rem 0 .75rem; padding-left: 1.25rem; color: var(--md-on-surface); }
+.install-steps li { margin-bottom: .5rem; line-height: 1.6; }
+.install-note { margin: 0; color: var(--md-on-surface-v); font-size: .82rem; }
+.install-note a { color: var(--md-primary); }
