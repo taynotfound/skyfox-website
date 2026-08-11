@@ -7,7 +7,10 @@
   --md-surface-2:    #162438;
   --md-surface-3:    #1c2d40;
   --md-on-surface:   #f8fafc;
-  --md-on-surface-v: #8aafc8;
+  --md-on-surface-v:   #8aafc8;
+  --md-on-surface-var: #8aafc8;   /* alias — appended blocks use this name */
+  --md-on-bg:          #e0dbd6;   /* alias for on-surface on bg */
+  --font-mono:         'Roboto Mono', monospace;
   --md-outline:      #4d7a9e;
   --md-outline-v:    #1e3a55;
   /* primary = sky blue #4db3ec */
