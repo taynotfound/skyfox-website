@@ -2,26 +2,24 @@
 
 :root {
   /* Exact Fox theme — from logo SVGs + AplColorsFox.darkDefault */
-  --md-bg:           #0b1220;
-  --md-surface:      #111f30;
-  --md-surface-2:    #162438;
-  --md-surface-3:    #1c2d40;
-  --md-on-surface:   #f8fafc;
-  --md-on-surface-v:   #b7c9d6;
-  --md-on-surface-var: #b7c9d6;   /* readable muted text on dark surfaces */
-  --md-on-bg:          #e0dbd6;   /* primary body text */
+  --md-bg:           #0B1220;
+  --md-surface:      #142C4A;
+  --md-surface-2:    #20262E;
+  --md-surface-3:    #142C4A;
+  --md-on-surface:   #FFFFFF;
+  --md-on-surface-v:   #F8FAFC;
+  --md-on-surface-var: #F8FAFC;
+  --md-on-bg:          #FFFFFF;
   --font-mono:         'Roboto Mono', monospace;
-  --md-outline:      #4d7a9e;
-  --md-outline-v:    #1e3a55;
-  /* primary = sky blue #4db3ec */
-  --md-primary:      #4db3ec;
-  --md-on-primary:   #001e30;
-  --md-primary-c:    #1a4a6e;
-  --md-on-primary-c: #bde3ff;
-  /* tertiary = fox orange #f96316 */
-  --md-tertiary:     #f96316;
-  --md-on-tertiary:  #2a1200;
-  --md-tertiary-c:   #4a2200;
+  --md-outline:      #2EA8F5;
+  --md-outline-v:    #142C4A;
+  --md-primary:      #2EA8F5;
+  --md-on-primary:   #20262E;
+  --md-primary-c:    #142C4A;
+  --md-on-primary-c: #FFFFFF;
+  --md-tertiary:     #FF641A;
+  --md-on-tertiary:  #20262E;
+  --md-tertiary-c:   #142C4A;
   /* shape */
   --r-xs:  4px;
   --r-sm:  12px;
@@ -173,7 +171,7 @@ h1 em { color: var(--md-primary); font-style: normal; }
   position: relative;
   z-index: 1;
   width: min(54%, 220px);
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,.5));
+  filter: none;
 }
 .orbit { position: absolute; border: 1px solid var(--md-outline-v); border-radius: 50%; transform: rotate(-24deg); }
 .orbit-one  { width: 115%; height: 38%; }
@@ -194,7 +192,7 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .label-dot  { width: 7px; height: 7px; border-radius: 50%; }
 .orange     { background: var(--md-primary); }
 .blue       { background: var(--md-tertiary); }
-.yellow     { background: #f6c84a; }
+.yellow     { background: #FF641A; }
 .label-one   { top: 16%; left: 8%; }
 .label-two   { right: 7%; top: 43%; }
 .label-three { left: 12%; bottom: 16%; }
@@ -248,11 +246,11 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .feature-wide { min-height: 320px; }
 .feature-accent {
   background: var(--md-primary-c);
-  border-color: color-mix(in srgb, var(--md-primary) 25%, transparent);
+  border-color: var(--md-primary);
   color: var(--md-on-bg);
 }
-.feature-accent .feature-index { color: #d8efff; }
-.feature-accent .feature-link { color: #d8efff; }
+.feature-accent .feature-index { color: #F8FAFC; }
+.feature-accent .feature-link { color: #F8FAFC; }
 .feature-accent p:not(.feature-index) { color: var(--md-on-bg); }
 .feature h3 {
   max-width: 460px;
@@ -435,7 +433,7 @@ h1 em { color: var(--md-primary); font-style: normal; }
   opacity: 0;
   animation: flyover 18s linear infinite;
   pointer-events: none;
-  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--md-primary) 60%, transparent));
+  filter: none;
   z-index: 0;
 }
 .plane-fly:nth-child(2) { animation-delay: 7s; top: 32%; font-size: 1.1rem; opacity: 0; }
@@ -460,10 +458,10 @@ h1 em { color: var(--md-primary); font-style: normal; }
   font-family: var(--font-mono);
   font-size: .8rem;
   color: var(--md-primary);
-  background: color-mix(in srgb, var(--md-primary) 12%, transparent);
+  background: var(--md-surface);
   padding: .2em .6em;
   border-radius: var(--r-xs);
-  border: 1px solid color-mix(in srgb, var(--md-primary) 30%, transparent);
+  border: 1px solid var(--md-primary);
   white-space: nowrap;
 }
 .release-notes-link {
@@ -611,11 +609,11 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .install-note { margin: 0; color: var(--md-on-surface-v); font-size: .82rem; }
 .install-note a { color: var(--md-primary); }
 
-.download-card .install-guide summary { color: #063c58; }
-.download-card .install-steps { color: #001e30; }
-.download-card .install-note { color: #063c58; }
+.download-card .install-guide summary { color: #FFFFFF; }
+.download-card .install-steps { color: #FFFFFF; }
+.download-card .install-note { color: #FFFFFF; }
 .download-card .install-note a,
-.download-card .download-meta a { color: #001e30; }
+.download-card .download-meta a { color: #FFFFFF; }
 
 /* ── Screenshot gallery ───────────────────────── */
 .screens-section {
@@ -716,8 +714,8 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .screenshots figure { background: transparent; padding: 0; }
 .screenshots img { background: var(--md-surface-3); }
 .download-tier { background: var(--md-surface-2); }
-.download-tier-stable { background: color-mix(in srgb, var(--md-on-primary) 14%, var(--md-primary)); }
-.download-tier-nightly { background: color-mix(in srgb, var(--md-primary-c) 72%, var(--md-primary)); }
+.download-tier-stable { background: var(--md-surface-2); }
+.download-tier-nightly { background: var(--md-surface-3); }
 .download-card .download-tier-nightly .button-secondary {
   background: var(--md-primary-c);
   border: 0;
@@ -734,7 +732,7 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .faq-item { background: var(--md-surface); }
 .ai-notice { background: var(--md-surface); border-left: 4px solid var(--md-tertiary); }
 .spotter-section { border-top: 0; }
-.install-guide { background: color-mix(in srgb, var(--md-on-primary) 8%, transparent); }
+.install-guide { background: var(--md-surface); }
 .download-card { background: var(--md-primary-c); color: var(--md-on-primary-c); }
 .download-card .eyebrow { color: var(--md-primary); }
 .download-card h2 { color: var(--md-on-surface); }
