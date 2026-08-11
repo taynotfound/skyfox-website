@@ -364,20 +364,20 @@ h1 em { color: var(--md-primary); font-style: normal; }
   gap: 3rem;
   align-items: center;
   padding: 3.5rem;
-  background: var(--md-primary);
-  color: var(--md-on-primary);
+  background: var(--md-primary-c);
+  color: var(--md-on-primary-c);
   border-radius: var(--r-xl);
 }
-.download-card .eyebrow { color: #063c58; }
-.download-card h2 { color: #001e30; }
-.download-card p:not(.eyebrow) { max-width: 560px; color: #063c58; }
+.download-card .eyebrow { color: var(--md-primary); }
+.download-card h2 { color: var(--md-on-surface); }
+.download-card p:not(.eyebrow) { max-width: 560px; color: var(--md-on-surface-v); }
 .download-card .download-tier p,
-.download-card .download-tier .tier-note { color: var(--md-on-bg); }
-.download-card .button-primary { background: var(--md-on-primary); border: none; color: var(--md-primary); }
+.download-card .download-tier .tier-note { color: var(--md-on-surface-v); }
+.download-card .button-primary { background: var(--md-primary); border: none; color: var(--md-on-primary); }
 .download-card .button-secondary {
-  background: color-mix(in srgb, var(--md-on-primary) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--md-on-primary) 25%, transparent);
-  color: var(--md-on-primary);
+  background: var(--md-surface-3);
+  border: none;
+  color: var(--md-on-surface);
 }
 
 /* ─── trust + footer ─── */
@@ -497,12 +497,12 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .download-tier {
   flex: 1;
   min-width: 220px;
-  border: 1px solid var(--md-outline);
-  border-radius: 12px;
+  border: 0;
+  border-radius: var(--r-md);
   padding: 1.25rem;
 }
-.download-tier-stable { border-color: var(--md-primary); background: color-mix(in srgb, var(--md-primary) 6%, var(--md-surface)); }
-.download-tier-nightly { background: var(--md-surface-2); }
+.download-tier-stable { background: var(--md-surface-2); }
+.download-tier-nightly { background: var(--md-surface-3); }
 .tier-label {
   font-size: .7rem;
   font-weight: 700;
@@ -735,5 +735,14 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .ai-notice { background: var(--md-surface); border-left: 4px solid var(--md-tertiary); }
 .spotter-section { border-top: 0; }
 .install-guide { background: color-mix(in srgb, var(--md-on-primary) 8%, transparent); }
-.download-card .install-guide { background: color-mix(in srgb, var(--md-on-primary) 10%, transparent); }
+.download-card { background: var(--md-primary-c); color: var(--md-on-primary-c); }
+.download-card .eyebrow { color: var(--md-primary); }
+.download-card h2 { color: var(--md-on-surface); }
+.download-card p:not(.eyebrow),
+.download-card .download-tier p,
+.download-card .download-tier .tier-note { color: var(--md-on-surface-v); }
+.download-tier-stable { background: var(--md-surface-2); }
+.download-tier-nightly { background: var(--md-surface-3); }
+.download-card .button-primary { background: var(--md-primary); color: var(--md-on-primary); }
+.download-card .button-secondary { background: var(--md-surface-3); color: var(--md-on-surface); }
 
