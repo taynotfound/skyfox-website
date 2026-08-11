@@ -7,9 +7,9 @@
   --md-surface-2:    #162438;
   --md-surface-3:    #1c2d40;
   --md-on-surface:   #f8fafc;
-  --md-on-surface-v:   #8aafc8;
-  --md-on-surface-var: #8aafc8;   /* alias — appended blocks use this name */
-  --md-on-bg:          #e0dbd6;   /* alias for on-surface on bg */
+  --md-on-surface-v:   #b7c9d6;
+  --md-on-surface-var: #b7c9d6;   /* readable muted text on dark surfaces */
+  --md-on-bg:          #e0dbd6;   /* primary body text */
   --font-mono:         'Roboto Mono', monospace;
   --md-outline:      #4d7a9e;
   --md-outline-v:    #1e3a55;
@@ -249,9 +249,11 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .feature-accent {
   background: var(--md-primary-c);
   border-color: color-mix(in srgb, var(--md-primary) 25%, transparent);
+  color: var(--md-on-bg);
 }
-.feature-accent .feature-index,
-.feature-accent .feature-link { color: var(--md-on-primary-c); }
+.feature-accent .feature-index { color: #d8efff; }
+.feature-accent .feature-link { color: #d8efff; }
+.feature-accent p:not(.feature-index) { color: var(--md-on-bg); }
 .feature h3 {
   max-width: 460px;
   margin: 1.5rem 0 .75rem;
@@ -529,6 +531,19 @@ h1 em { color: var(--md-primary); font-style: normal; }
   line-height: 1.6;
 }
 
+/* ── Project disclosure ──────────────────────────────────── */
+.ai-notice {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  border: 1px solid var(--md-outline-v);
+  border-left: 3px solid var(--md-tertiary);
+  border-radius: var(--r-md);
+  background: var(--md-surface);
+}
+.ai-notice h2 { margin: 0 0 .75rem; font-size: clamp(1.5rem, 3vw, 2.2rem); }
+.ai-notice p:last-child { max-width: 780px; margin: 0; color: var(--md-on-bg); }
+
 /* ── Footer attr ─────────────────────────────────────────── */
 .footer-attr {
   font-size: .75rem;
@@ -595,9 +610,9 @@ h1 em { color: var(--md-primary); font-style: normal; }
 
 .screenshots {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.25rem;
-  align-items: end;
+  align-items: start;
 }
 /* alternate heights for visual rhythm */
 .screenshots .screenshot-item:nth-child(odd)  { transform: translateY(-16px); }
@@ -617,8 +632,11 @@ h1 em { color: var(--md-primary); font-style: normal; }
   z-index: 1;
 }
 .screenshot-item img {
-  width: 100%; height: auto; aspect-ratio: 9/19;
-  object-fit: cover; object-position: top;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: top;
   border-radius: 20px;
   display: block;
   background: var(--md-surface-2);

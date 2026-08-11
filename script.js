@@ -442,6 +442,22 @@ const locales = {
 };
 
 
+let currentLocale = (() => {
+  const segment = location.pathname.split('/').filter(Boolean)[0];
+  return locales[segment] ? segment : 'en';
+})();
+
+function applyLocale(locale) {
+  const strings = locales[locale] || locales.en;
+  document.documentElement.lang = locale;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const value = strings[el.dataset.i18n];
+    if (value !== undefined) el.innerHTML = value;
+  });
+  const picker = document.getElementById('locale');
+  if (picker) picker.value = locale;
+}
+
 // Screenshot gallery
 const galleryScreenshots = {
   en: [
@@ -485,10 +501,9 @@ function renderGallery(locale) {
   gallery.innerHTML = shots.map(s => `
     <figure class="screenshot-item">
       <img
-        src="assets/screenshots/${locale}/${s.file}"
+        src="/assets/screenshots/${locale}/${s.file}"
         alt="${s.caption}"
         loading="lazy"
-        width="360" height="720"
         onerror="this.closest('figure').style.display='none'"
       >
       <figcaption>${s.caption}</figcaption>
@@ -497,6 +512,14 @@ function renderGallery(locale) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  applyLocale(currentLocale);
+  const localePicker = document.getElementById('locale');
+  localePicker?.addEventListener('change', event => {
+    const locale = event.target.value;
+    applyLocale(locale);
+    currentGalleryLocale = locale;
+    renderGallery(locale);
+  });
   renderGallery(currentGalleryLocale);
 
   document.querySelectorAll('.locale-button[data-gallery-locale]').forEach(btn => {
