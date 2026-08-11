@@ -442,6 +442,73 @@ const locales = {
 };
 
 
+// Screenshot gallery
+const galleryScreenshots = {
+  en: [
+    { file: 'map.png',          caption: 'See what\'s overhead.' },
+    { file: 'search.png',       caption: 'Find the aircraft you just saw.' },
+    { file: 'plane-details.png',caption: 'Know exactly what you\'re looking at.' },
+    { file: 'watch.png',        caption: 'Keep tabs on the interesting ones.' },
+  ],
+  de: [
+    { file: 'map.png',          caption: 'Sieh, was über dir fliegt.' },
+    { file: 'search.png',       caption: 'Finde das Flugzeug, das du gerade gesehen hast.' },
+    { file: 'plane-details.png',caption: 'Wisse genau, was du anschaust.' },
+    { file: 'watch.png',        caption: 'Behalte die interessanten im Blick.' },
+  ],
+  fr: [
+    { file: 'map.png',          caption: 'Vois ce qui est au-dessus de toi.' },
+    { file: 'search.png',       caption: 'Retrouve l\'appareil que tu viens de voir.' },
+    { file: 'plane-details.png',caption: 'Sais exactement ce que tu regardes.' },
+    { file: 'watch.png',        caption: 'Garde un oeil sur les intéressants.' },
+  ],
+  es: [
+    { file: 'map.png',          caption: 'Ve lo que está encima de ti.' },
+    { file: 'search.png',       caption: 'Encuentra la aeronave que acabas de ver.' },
+    { file: 'plane-details.png',caption: 'Sabe exactamente qué estás mirando.' },
+    { file: 'watch.png',        caption: 'Vigila los interesantes.' },
+  ],
+  it: [
+    { file: 'map.png',          caption: 'Guarda cosa c\'è sopra di te.' },
+    { file: 'search.png',       caption: 'Trova l\'aeromobile che hai appena visto.' },
+    { file: 'plane-details.png',caption: 'Sai esattamente cosa stai guardando.' },
+    { file: 'watch.png',        caption: 'Tieni d\'occhio quelli interessanti.' },
+  ],
+};
+
+let currentGalleryLocale = 'en';
+
+function renderGallery(locale) {
+  const gallery = document.getElementById('gallery');
+  if (!gallery) return;
+  const shots = galleryScreenshots[locale] || galleryScreenshots['en'];
+  gallery.innerHTML = shots.map(s => `
+    <figure class="screenshot-item">
+      <img
+        src="assets/screenshots/${locale}/${s.file}"
+        alt="${s.caption}"
+        loading="lazy"
+        width="360" height="720"
+        onerror="this.closest('figure').style.display='none'"
+      >
+      <figcaption>${s.caption}</figcaption>
+    </figure>
+  `).join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderGallery(currentGalleryLocale);
+
+  document.querySelectorAll('.locale-button[data-gallery-locale]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.locale-button[data-gallery-locale]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentGalleryLocale = btn.dataset.galleryLocale;
+      renderGallery(currentGalleryLocale);
+    });
+  });
+});
+
 // Latest release badge
 async function loadRelease() {
   try {

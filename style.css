@@ -572,3 +572,62 @@ h1 em { color: var(--md-primary); font-style: normal; }
 .install-steps li { margin-bottom: .5rem; line-height: 1.6; }
 .install-note { margin: 0; color: var(--md-on-surface-v); font-size: .82rem; }
 .install-note a { color: var(--md-primary); }
+
+/* ── Screenshot gallery ───────────────────────── */
+.screenshots {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding: 1rem .25rem 1.5rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-outline) transparent;
+}
+.screenshot-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 200px;
+}
+.screenshot-item img {
+  width: 200px;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--r-md);
+  border: 1px solid var(--md-outline-v);
+  display: block;
+  background: var(--md-surface-2);
+}
+.screenshot-item figcaption {
+  margin-top: .6rem;
+  font-size: .8rem;
+  color: var(--md-on-surface-v);
+  text-align: center;
+  line-height: 1.4;
+}
+.gallery-controls {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+.locale-button {
+  padding: .3rem .75rem;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--md-outline-v);
+  background: transparent;
+  color: var(--md-on-surface-v);
+  font-size: .8rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .15s, color .15s;
+}
+.locale-button:hover { background: var(--md-surface-2); color: var(--md-on-surface); }
+.locale-button.active { background: var(--md-primary-c); color: var(--md-on-primary-c); border-color: var(--md-primary); }
+
+@media (max-width: 600px) {
+  .screenshot-item { width: 160px; }
+  .screenshot-item img { width: 160px; height: 320px; }
+}
