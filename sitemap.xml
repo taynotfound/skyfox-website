@@ -8,11 +8,43 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://skyfox.taymaerz.de/es/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://skyfox.taymaerz.de/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://skyfox.taymaerz.de/"/>
-    <changefreq>weekly</changefreq><priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
-  <url><loc>https://skyfox.taymaerz.de/de/</loc></url>
-  <url><loc>https://skyfox.taymaerz.de/fr/</loc></url>
-  <url><loc>https://skyfox.taymaerz.de/es/</loc></url>
-  <url><loc>https://skyfox.taymaerz.de/it/</loc></url>
-  <url><loc>https://skyfox.taymaerz.de/privacy</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url>
+    <loc>https://skyfox.taymaerz.de/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skyfox.taymaerz.de/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://skyfox.taymaerz.de/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://skyfox.taymaerz.de/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://skyfox.taymaerz.de/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://skyfox.taymaerz.de/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skyfox.taymaerz.de/"/>
+  </url>
+  <url>
+    <loc>https://skyfox.taymaerz.de/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skyfox.taymaerz.de/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://skyfox.taymaerz.de/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://skyfox.taymaerz.de/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://skyfox.taymaerz.de/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://skyfox.taymaerz.de/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skyfox.taymaerz.de/"/>
+  </url>
+  <url>
+    <loc>https://skyfox.taymaerz.de/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skyfox.taymaerz.de/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://skyfox.taymaerz.de/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://skyfox.taymaerz.de/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://skyfox.taymaerz.de/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://skyfox.taymaerz.de/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skyfox.taymaerz.de/"/>
+  </url>
+  <url>
+    <loc>https://skyfox.taymaerz.de/it/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skyfox.taymaerz.de/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://skyfox.taymaerz.de/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://skyfox.taymaerz.de/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://skyfox.taymaerz.de/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://skyfox.taymaerz.de/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skyfox.taymaerz.de/"/>
+  </url>
 </urlset>
