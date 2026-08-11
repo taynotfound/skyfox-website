@@ -697,3 +697,43 @@ h1 em { color: var(--md-primary); font-style: normal; }
   }
 }
 
+/* ── Material 3 Expressive surface pass ────────────────── */
+/* Keep hierarchy tonal; outlines are reserved for controls and focus. */
+.nav-cta,
+.hero-art,
+.feature,
+.screenshots figure,
+.download-tier,
+.faq-list,
+.ai-notice,
+.install-guide { border: 0; }
+.nav-cta { background: var(--md-primary-c); }
+.nav-cta:hover { background: var(--md-surface-3); }
+.hero-art, .feature { background: var(--md-surface); }
+.feature:nth-child(3n) { background: var(--md-surface-2); }
+.feature-accent { background: var(--md-primary-c); }
+.screens-section { background: var(--md-surface-2); }
+.screenshots figure { background: transparent; padding: 0; }
+.screenshots img { background: var(--md-surface-3); }
+.download-tier { background: var(--md-surface-2); }
+.download-tier-stable { background: color-mix(in srgb, var(--md-on-primary) 14%, var(--md-primary)); }
+.download-tier-nightly { background: color-mix(in srgb, var(--md-primary-c) 72%, var(--md-primary)); }
+.download-card .download-tier-nightly .button-secondary {
+  background: var(--md-primary-c);
+  border: 0;
+  color: var(--md-on-primary-c);
+}
+.download-card .download-tier-nightly .button-secondary:hover {
+  background: var(--md-surface-3);
+  color: var(--md-on-surface);
+}
+.faq-list { gap: .5rem; background: transparent; overflow: visible; }
+.faq-item,
+.faq-item:first-child,
+.faq-item:last-child { border-radius: var(--r-md); }
+.faq-item { background: var(--md-surface); }
+.ai-notice { background: var(--md-surface); border-left: 4px solid var(--md-tertiary); }
+.spotter-section { border-top: 0; }
+.install-guide { background: color-mix(in srgb, var(--md-on-primary) 8%, transparent); }
+.download-card .install-guide { background: color-mix(in srgb, var(--md-on-primary) 10%, transparent); }
+
