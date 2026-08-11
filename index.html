@@ -25,9 +25,10 @@
   <meta name="twitter:image" content="https://skyfox.taymaerz.de/assets/og-image.png">
   <link rel="icon" type="image/svg+xml" href="/assets/SkyFox_Monochrome.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,75..125,300..900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=roboto-1">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -62,7 +63,7 @@
 
       <div class="nav-actions">
         <label class="language-control" aria-label="Language">
-          <span aria-hidden="true" class="control-icon">文</span>
+          <i aria-hidden="true" class="control-icon fa-solid fa-language"></i>
           <select id="locale" aria-label="Language">
             <option value="en">EN</option>
             <option value="de">DE</option>
@@ -113,11 +114,11 @@
 
     <section class="quick-band wrap reveal" aria-label="SkyFox at a glance">
       <div class="quick-item">
-        <span class="quick-icon">⌖</span>
+        <span class="quick-icon"><i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i></span>
         <div><strong data-i18n="quick1Title">Map first</strong><span data-i18n="quick1Text">See what’s overhead right now.</span></div>
       </div>
       <div class="quick-item">
-        <span class="quick-icon">⌕</span>
+        <span class="quick-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
         <div><strong data-i18n="quick2Title">Search deep</strong><span data-i18n="quick2Text">Callsign, HEX, registration, type, squawk.</span></div>
       </div>
       <div class="quick-item">
@@ -134,7 +135,7 @@
 
       <div class="bento-grid">
         <article class="feature-card feature-map reveal">
-          <div class="feature-icon feature-icon-primary">⌖</div>
+          <div class="feature-icon feature-icon-primary"><i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i></div>
           <div class="feature-copy">
             <p class="kicker" data-i18n="feat1Label">LIVE MAP</p>
             <h3 data-i18n="feat1H3">See what’s overhead.</h3>
@@ -146,7 +147,7 @@
         </article>
 
         <article class="feature-card feature-search reveal">
-          <div class="feature-icon">⌕</div>
+          <div class="feature-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
           <p class="kicker" data-i18n="feat2Label">SEARCH</p>
           <h3 data-i18n="feat2H3">Find the one you just saw.</h3>
           <p data-i18n="feat2P">Search by callsign, registration, HEX, aircraft type or squawk.</p>
@@ -154,11 +155,11 @@
         </article>
 
         <article class="feature-card feature-watch reveal">
-          <div class="feature-icon feature-icon-orange">◎</div>
+          <div class="feature-icon feature-icon-orange"><i class="fa-solid fa-eye" aria-hidden="true"></i></div>
           <p class="kicker" data-i18n="feat3Label">WATCHLISTS + ALERTS</p>
           <h3 data-i18n="feat3H3">Save it. We’ll watch for it.</h3>
           <p data-i18n="feat3P">Watch aircraft, registrations, callsigns or squawks and get alerted when something interesting appears.</p>
-          <div class="alert-pill" aria-hidden="true"><span>✈</span><div><strong>D-AIMA nearby</strong><small>42 km away · ADS-B</small></div></div>
+          <div class="alert-pill" aria-hidden="true"><span><i class="fa-solid fa-plane" aria-hidden="true"></i></span><div><strong>D-AIMA nearby</strong><small>42 km away · ADS-B</small></div></div>
         </article>
 
         <article class="feature-card feature-details reveal">
@@ -168,13 +169,13 @@
             <p data-i18n="feat4P">Operator, route, altitude, speed, heading, vertical rate, registry details and emergency squawk status in one place.</p>
           </div>
           <div class="route-card" aria-hidden="true">
-            <div><small>Lufthansa · A380-841</small><strong>FRA <span>✈</span> LHR</strong></div>
+            <div><small>Lufthansa · A380-841</small><strong>FRA <i class="fa-solid fa-plane" aria-hidden="true"></i> LHR</strong></div>
             <div class="route-stats"><span><small>CALLSIGN</small>DLH456</span><span><small>ALTITUDE</small>38,000 ft</span><span><small>SPEED</small>280 kts</span></div>
           </div>
         </article>
 
         <article class="feature-card feature-feeder reveal">
-          <div class="feature-icon">⌁</div>
+          <div class="feature-icon"><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i></div>
           <p class="kicker" data-i18n="feat5Label">FEEDER STATUS</p>
           <h3 data-i18n="feat5H3">Feeding airplanes.live?</h3>
           <p data-i18n="feat5P">Keep an eye on your feeder and get notified if it goes offline.</p>
@@ -238,7 +239,7 @@
           <p class="download-intro" data-i18n="downloadIntro">No Play Store account, subscription or sign-up required. Download the APK directly from GitHub.</p>
           <div class="release-row">
             <div class="release-info"><small data-i18n="latestRelease">LATEST RELEASE</small><strong id="release-tag">Latest stable</strong><span data-i18n="androidRequirement">Android 8.0+</span></div>
-            <a class="button button-primary button-large" id="release-dl" href="https://github.com/taynotfound/skyfox/releases/latest/download/skyfox-release.apk"><span data-i18n="downloadBtn">Download APK</span><span aria-hidden="true">↓</span></a>
+            <a class="button button-primary button-large" id="release-dl" href="https://github.com/taynotfound/skyfox/releases/latest/download/skyfox-release.apk"><span data-i18n="downloadBtn">Download APK</span><i class="fa-solid fa-download" aria-hidden="true"></i></a>
           </div>
           <div class="download-links">
             <a id="release-notes" href="https://github.com/taynotfound/skyfox/releases/latest" target="_blank" rel="noreferrer" data-i18n="changelog">Release notes ↗</a>
@@ -250,9 +251,9 @@
     </section>
 
     <section class="section wrap values-section">
-      <div class="value-card reveal"><span class="value-symbol">$0</span><strong data-i18n="value1Title">Actually free</strong><p data-i18n="value1Text">No subscriptions, ads or in-app purchases.</p></div>
-      <div class="value-card reveal"><span class="value-symbol">⌁</span><strong data-i18n="value2Title">Open source</strong><p data-i18n="value2Text">The code is public. Inspect it, build it, improve it.</p></div>
-      <div class="value-card reveal"><span class="value-symbol">⊘</span><strong data-i18n="value3Title">No account</strong><p data-i18n="value3Text">Flight tracking should not begin with a registration form.</p></div>
+      <div class="value-card reveal"><span class="value-symbol"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i></span><strong data-i18n="value1Title">Actually free</strong><p data-i18n="value1Text">No subscriptions, ads or in-app purchases.</p></div>
+      <div class="value-card reveal"><span class="value-symbol"><i class="fa-solid fa-code" aria-hidden="true"></i></span><strong data-i18n="value2Title">Open source</strong><p data-i18n="value2Text">The code is public. Inspect it, build it, improve it.</p></div>
+      <div class="value-card reveal"><span class="value-symbol"><i class="fa-solid fa-user-slash" aria-hidden="true"></i></span><strong data-i18n="value3Title">No account</strong><p data-i18n="value3Text">Flight tracking should not begin with a registration form.</p></div>
     </section>
 
     <section class="section wrap faq-section" id="faq">

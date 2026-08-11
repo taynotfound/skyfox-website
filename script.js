@@ -54,17 +54,28 @@
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('in-view'));
   }
 
-  // Fetch release metadata without making download depend on the API.
-  fetch('https://api.github.com/repos/taynotfound/skyfox/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+  // Prefer the newest published release, then fall back to the newest tag.
+  // The fallback keeps the version label truthful even when a tag has not
+  // received a GitHub Release yet.
+  const repoApi = 'https://api.github.com/repos/taynotfound/skyfox';
+  const tag = document.getElementById('release-tag');
+  const notes = document.getElementById('release-notes');
+  const dl = document.getElementById('release-dl');
+  fetch(`${repoApi}/releases/latest`, { headers: { Accept: 'application/vnd.github+json' } })
     .then(r => r.ok ? r.json() : Promise.reject())
     .then(release => {
-      const tag = document.getElementById('release-tag');
-      const notes = document.getElementById('release-notes');
       if (tag && release.tag_name) tag.textContent = release.tag_name;
       if (notes && release.html_url) notes.href = release.html_url;
       const apk = Array.isArray(release.assets) ? release.assets.find(a => /\.apk$/i.test(a.name)) : null;
-      const dl = document.getElementById('release-dl');
       if (dl && apk?.browser_download_url) dl.href = apk.browser_download_url;
+    })
+    .catch(() => fetch(`${repoApi}/tags?per_page=1`, { headers: { Accept: 'application/vnd.github+json' } }))
+    .then(r => r && r.ok ? r.json() : null)
+    .then(tags => {
+      const newest = Array.isArray(tags) ? tags[0] : null;
+      if (!newest?.name) return;
+      if (tag) tag.textContent = newest.name;
+      if (notes) notes.href = `https://github.com/taynotfound/skyfox/releases/tag/${encodeURIComponent(newest.name)}`;
     })
     .catch(() => {});
 })();
